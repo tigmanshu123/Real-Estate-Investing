@@ -52,7 +52,6 @@ def compute_zestimate_trends(street_address, zestimate_data):
     with open(json_path, 'w') as json_file:
         json.dump(trends, json_file, indent=4)
 
-    return trends
 
 
 def compute_zestimate_to_purchase_percent(street_address, zestimate, purchase_price):
@@ -74,7 +73,6 @@ def compute_zestimate_to_purchase_percent(street_address, zestimate, purchase_pr
     with open(json_path, 'w') as json_file:
         json.dump({"zestimate_to_purchase_percent": percent}, json_file, indent=4)
 
-    return percent
 
 
 def get_school_ratings(street_address,full_address, rapid_api_key):
@@ -161,6 +159,7 @@ def compute_cocroi(street_address, params_filepath):
 
 
 def compute_overall_cagr(street_address, params_filepath, full_address,rapid_api_key):
+
     # Load parameters from YAML file
     params = read_yaml(params_filepath)
     purchase_price = params['deal_information']['purchase_price']
@@ -216,9 +215,8 @@ def compute_overall_cagr(street_address, params_filepath, full_address,rapid_api
     annual_data['Cumulative Annual Cash Flow'] = annual_data['Annual Cash Flow'].cumsum()
 
     # Keep only the 'Year', 'Annual Cash Flow', 'Home Value', 'Home Equity', 'Sales Cost', and 'Overall Return' columns
-    annual_data = annual_data[['Year', 'Cumulative Annual Cash Flow', 'Annual Cash Flow', 'Home Value', 'Home Equity', 'Sales Cost', 'Overall Return']]
-
     annual_data['Overall Return'] = annual_data['Cumulative Annual Cash Flow'] + annual_data['Home Equity'] - annual_data['Sales Cost']
+    annual_data = annual_data[['Year', 'Cumulative Annual Cash Flow', 'Annual Cash Flow', 'Home Value', 'Home Equity', 'Sales Cost', 'Overall Return']]
 
     # Calculate overall CAGR
     annual_data['Overall CAGR'] = ((annual_data['Overall Return'] / total_investment) ** (1 / annual_data['Year']) - 1) * 100

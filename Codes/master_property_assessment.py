@@ -65,45 +65,45 @@ def run_property_assessment(param_file_path):
 
     print("\n\nInitiating property assessment for:", full_address)
 
-    # # Mortgage assessment
-    # mortgage_result = mortgage.calculate_mortgage(street_address, loan_amount, interest_rate, tenure_years, "Champion Case")
+    # Mortgage assessment
+    mortgage_result = mortgage.calculate_mortgage(street_address, loan_amount, interest_rate, tenure_years, "Champion_Case")
 
-    # # Nearby amenity assessment
-    # geo.get_distance_to_amenities(street_address,full_address,amenities,google_maps_api_key)
+    # Nearby amenity assessment
+    geo.get_distance_to_amenities(street_address,full_address,amenities,google_maps_api_key)
 
-    # # Flood risk assessment
-    # flood_risk_results = geo.estimate_flood_risk(full_address,google_maps_api_key)
+    # Flood risk assessment
+    flood_risk_results = geo.estimate_flood_risk(full_address,google_maps_api_key)
 
-    # # Rent estimation
-    # rentometer_results = rent.get_rentometer_estimate(full_address, street_address, bedrooms, baths, build_type, 365, rentometer_api_key)
-    # zillow_results = rent.get_zillow_rent_estimates(street_address, full_address, build_type, rapid_api_key)
-    # final_rent = rent.final_rent_estimator(street_address, rentometer_results, zillow_results, param_file_path)
+    # Rent estimation
+    rentometer_results = rent.get_rentometer_estimate(full_address, street_address, bedrooms, baths, build_type, 365, rentometer_api_key)
+    zillow_results = rent.get_zillow_rent_estimates(street_address, full_address, build_type, rapid_api_key)
+    final_rent = rent.final_rent_estimator(street_address, rentometer_results, zillow_results, param_file_path)
     
-    # # Property detail assessment
-    # geo.save_street_image(street_address,full_address,google_maps_api_key)
-    # zestimate_history = prop_details.get_zestimate_history(street_address, full_address, rapid_api_key)
-    # current_zestimate = prop_details.get_current_zestimate(full_address,rapid_api_key)
-    # prop_details.get_property_images(street_address,full_address, rapid_api_key)
-    # tax_history = prop_details.price_and_tax_history(street_address, full_address, rapid_api_key)
-    # prop_details.get_property_characteristics(street_address, full_address, rapid_api_key)
+    # Property detail assessment
+    geo.save_street_image(street_address,full_address,google_maps_api_key)
+    zestimate_history = prop_details.get_zestimate_history(street_address, full_address, rapid_api_key)
+    current_zestimate = prop_details.get_current_zestimate(full_address,rapid_api_key)
+    prop_details.get_property_images(street_address,full_address, rapid_api_key)
+    tax_history = prop_details.price_and_tax_history(street_address, full_address, rapid_api_key)
+    prop_details.get_property_characteristics(street_address, full_address, rapid_api_key)
                             
-    # # Cash flow estimation                           
-    # cash_flow.calculate_expenses(street_address, final_rent['median_rent'], param_file_path, tenure_years, tax_history,mortgage_result)
+    # Cash flow estimation                           
+    cash_flow.calculate_expenses(street_address, final_rent['median_rent'], param_file_path, tenure_years, tax_history,mortgage_result)
 
-    # # Performance analysis
-    # trend_results = perf_analysis.compute_zestimate_trends(street_address, zestimate_history)
-    # zest_to_price_percent = perf_analysis.compute_zestimate_to_purchase_percent(street_address, current_zestimate, purchase_price)
-    # perf_analysis.get_school_ratings(street_address,full_address, rapid_api_key)
-    # perf_analysis.compute_performance_kpis(street_address, param_file_path, full_address, rapid_api_key)
+    # Performance analysis
+    perf_analysis.compute_zestimate_trends(street_address, zestimate_history)
+    perf_analysis.compute_zestimate_to_purchase_percent(street_address, current_zestimate, purchase_price)
+    perf_analysis.get_school_ratings(street_address,full_address, rapid_api_key)
+    perf_analysis.compute_performance_kpis(street_address, param_file_path, full_address, rapid_api_key)
 
-    # # Location details assessment
-    # loc_details.get_niche_area_feel(street_address, zip_code, openai_api_key, openai_model)
-    # loc_details.get_niche_overall_grade(street_address, zip_code)
-    # loc_details.merge_json_files(street_address,'niche_area_feel.json','niche_overall_grade.json','niche_location_assessment.json')
+    # Location details assessment
+    loc_details.get_niche_area_feel(street_address, zip_code, openai_api_key, openai_model)
+    loc_details.get_niche_overall_grade(street_address, zip_code)
+    loc_details.merge_json_files(street_address,'niche_area_feel.json','niche_overall_grade.json','niche_location_assessment.json')
 
-    # # Open the location in Google Maps
-    # geo.save_maps_image(street_address,full_address,google_maps_api_key,zoom_level=14)
-    # geo.open_in_maps(full_address,google_maps_api_key)
+    # Open the location in Google Maps
+    geo.save_maps_image(street_address,full_address,google_maps_api_key,zoom_level=14)
+    geo.open_in_maps(full_address,google_maps_api_key)
 
     # Generate the documentation
     doc.generate_all_markdown_files(street_address, openai_api_key, openai_model)

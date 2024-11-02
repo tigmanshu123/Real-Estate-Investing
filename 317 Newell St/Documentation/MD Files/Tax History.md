@@ -1,25 +1,32 @@
-## Tax History Analysis
+## Assessment of Tax History
 
-Upon reviewing the tax history data, it's evident that the property has experienced variable changes in both assessed value and taxes paid over the years.
+Upon analyzing the property's tax history from the provided dataset, certain patterns and trends emerge that can significantly inform any investment decisions.
 
-- **Historical Trend of Assessed Value and Taxes Paid**: 
-  - The assessed value of the property has seen significant variation. For example, in 1998, the value was approximately $13,853. In 2023, the value had increased to around $25,050. This indicates a steady increase in value over the decades.
-  - Taxes paid have also fluctuated. In the late 1990s, taxes stood at $495.20. By 2023, it climbed to $1,286.
+## Evolution of Tax Payments
 
-- **Significant Value and Tax Increases**: 
-  - A particularly notable increase occurred around 2002. The value jumped by approximately 52.33% to $21,102, causing a substantial 34.52% increase in the tax rate, pushing the tax paid to $720.28.
-  - Similarly, in 2020, the property value went up by 25.17% to $19,387, marking another period of pronounced increase.
+Tax payments have generally exhibited an upward trend over the years. It is important to note that:
+- In **1999**, the tax paid was $495.20 on a property value of $13,853.
+- By **2010**, the tax had significantly increased to approximately $1,084, despite the property value being close at $21,050.
+- Recently, in **2023**, the tax paid was recorded at $1,286. This reflects a modest increase compared to the tax of $1,147.16 recorded in **2022**.
 
-- **Decreases and Stability**:
-  - There were periods of stability and decrease as well. For instance, in 2014, the assessed value decreased by 5.20% while the tax increased by 11.65%, resulting in taxes amounting to $1,123.88.
-  - A stable tax with no increase occurred in 2020, maintaining the tax paid at $1,145.94, suggesting a period of fiscal stability despite no change in property value.
+## Property Value and Tax Increase Correlation
 
-## Potential Risks and Considerations
+The property's assessed value has shown fluctuations that directly correlate with tax changes:
+- Notably, the property value rocketed by over 50% in **2002**, resulting in a consequent tax increase of approximately 34.5%.
+- In more recent years, such as **2022 to 2023**, the property experienced a value increase rate of 29.2%, and the tax increase rate was 12.1%. This elucidates a strong connection between value increases and rising tax obligations.
 
-- **Tax Volatility**: The tax history reveals fluctuations in both value increase rates and tax increase rates. For instance, between 2013 and 2014, there was a tax increase disparity, where the tax rate for a lower valued year surprisingly saw an increase.
-- **Missing Tax Data**: Noteworthy is the absence of specific tax data for some years, such as 2008, which could imply potential issues in record-keeping or omitted fiscal responsibilities.
+## Observations on Property Value Fluctuations
 
-Overall, the historical tax review indicates that potential investors or stakeholders should prepare for variability in tax obligations that could be linked to significant alterations in assessed value. The fluctuations highlight an element of unpredictability that should be accounted for in financial forecasting and investment strategies.
+There were some periods of property value reductions, which coincided with tax payments decreasing or remaining stable:
+- In **2009**, a property value decrease of approximately 17.24% led to a notable reduction in taxes by around 14.19%.
+- Another period of value decline occurred in **2018** where the property value reduced by 4.1%, but taxes slightly increased by about 2.6%, suggesting a delay in tax adjustments or additional influencing factors.
+
+## Risks and Considerations
+
+- The episodic nature of substantial increases in property value (e.g., over 52% in **2002**) raises potential risk concerns regarding unexpected spikes in tax liabilities.
+- Periods where tax increases precede value increases, such as in **2015**, indicate potential local reassessments or policy changes, representing further risk for forecasting future tax liabilities.
+
+The property's tax history not only serves as an essential indicator of financial obligations but also reflects on the region's real estate market dynamics, making it crucial for investors to consider these factors in their investment appraisal.
 
 Below is a chart showing the evolution of the paid tax and assessed value of the property over history (sourced from Zillow)
 

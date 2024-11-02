@@ -132,7 +132,7 @@ def generate_chapter_md(street_address, json_name, chapter_title, openai_api_key
     response_content = response.choices[0].message['content']
 
     # Step 4: Create .md file
-    with open(md_file_path, 'w') as md_file:
+    with open(md_file_path, 'w', encoding='utf-8') as md_file:
         # Step 5: Fill the markdown file with response content
         md_file.write(response_content)
     

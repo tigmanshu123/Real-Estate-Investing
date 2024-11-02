@@ -1,11 +1,12 @@
-- Below is the risk assessment of the nearby amenities -
+Below is the risk assessment of the nearby amenities -
 
-| Amenity   | Address                                                 | Distance (in km) | Distance (in miles) | Duration | Risk Score | Rationale                                                                                         |
-|-----------|---------------------------------------------------------|------------------|---------------------|----------|------------|---------------------------------------------------------------------------------------------------|
-| Hospital  | NOT_FOUND                                               | NOT_FOUND        | NOT_FOUND           | NOT_FOUND| 10         | The lack of a nearby hospital poses a high risk in case of emergency situations.                  |
-| School    | 555 Barber Road, Barberton                              | 1.0 km           | 0.62 miles          | 2 mins   | 3          | Proximity to the school is ideal for families with children, indicating low risk in terms of access.  |
-| Restaurant| 343 4th Street Northwest, Barberton                     | 0.4 km           | 0.25 miles          | 1 min    | 2          | The restaurant is within walking distance, providing accessibility to dining options, low risk.   |
-| Park      | Municipal Building, 500 West Hopocan Avenue, Barberton  | 0.3 km           | 0.19 miles          | 1 min    | 1          | The park's proximity offers great recreational opportunities, minimal risk.                       |
-| Bank      | 532 Wooster Road West, Barberton                        | 1.2 km           | 0.75 miles          | 3 mins   | 4          | The bank is easily accessible, though not within immediate walking distance, presenting moderate risk.|
-| Grocery   | Barberton                                               | 0.8 km           | 0.50 miles          | 2 mins   | 2          | Being near a grocery store is convenient for daily needs, resulting in low risk.                  |
-| **Overall**  | **-**                                                   | **-**              | **-**                 | **-**      | **4**        | **Overall, the amenities are accessible, with the exception of the hospital, thus moderately minimizing locality risk.**       | 
+| Amenity    | Address                                        | Distance (in km) | Distance (in miles) | Duration | Risk Score | Rationale                                                                                     |
+|------------|------------------------------------------------|------------------|---------------------|----------|------------|-----------------------------------------------------------------------------------------------|
+| Hospital   | NOT_FOUND                                      | NOT_FOUND        | NOT_FOUND           | NOT_FOUND| 10         | The lack of a nearby hospital poses a significant risk in emergencies, severely affecting desirability. |
+| School     | 555 Barber Road, Barberton                     | 1.0              | 0.62                | 2 mins   | 3          | The proximity to a school within 1 km is beneficial for families, enhancing property value and appeal. |
+| Restaurant | 343 4th Street Northwest, Barberton            | 0.4              | 0.25                | 1 min    | 1          | The restaurant within close proximity is favorable, encouraging social activities and convenience. |
+| Park       | Municipal Building, 500 West Hopocan Avenue, Barberton | 0.3       | 0.19                | 1 min    | 1          | The nearby park offers recreational opportunities, increasing desirability for families and nature enthusiasts. |
+| Bank       | 532 Wooster Road West, Barberton               | 1.2              | 0.75                | 3 mins   | 4          | Access to financial services is convenient, though a slightly farther distance may add minor inconvenience. |
+| Grocery    | Barberton                                      | 0.8              | 0.50                | 2 mins   | 2          | Having a grocery store within close proximity ensures convenience for daily shopping needs, reducing living costs. |
+| **Overall**|                                                |                  |                     |          | **5.2**    | The absence of a hospital presents a considerable risk; however, other essential amenities like education, dining, leisure, and shopping are highly accessible, enhancing overall appeal. |
+

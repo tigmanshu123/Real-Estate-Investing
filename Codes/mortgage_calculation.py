@@ -53,7 +53,7 @@ def calculate_mortgage(street_address, principal, annual_interest_rate, years, s
     ax2.legend(loc='upper right')
     ax1.grid(True)
 
-    plt.savefig(os.path.join(plots_dir, f'Amortization Schedule - {scenario_name}.png'))
+    plt.savefig(os.path.join(plots_dir, f'Amortization_Schedule_{scenario_name}.png'))
     plt.close()
 
     # Create the Results directory if it doesn't exist
