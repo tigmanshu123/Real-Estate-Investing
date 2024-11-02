@@ -1,0 +1,322 @@
+{
+    "priceHistory": [
+        {
+            "priceChangeRate": 0,
+            "date": "2024-07-01",
+            "source": "Zillow Rentals",
+            "postingIsRental": true,
+            "time": 1719792000000,
+            "sellerAgent": null,
+            "showCountyLink": false,
+            "attributeSource": {
+                "infoString2": "Zillow Rentals",
+                "infoString3": null,
+                "infoString1": null
+            },
+            "pricePerSquareFoot": null,
+            "buyerAgent": null,
+            "event": "Listing removed",
+            "price": null
+        },
+        {
+            "priceChangeRate": 0,
+            "date": "2024-06-23",
+            "source": "Zillow Rentals",
+            "postingIsRental": true,
+            "time": 1719100800000,
+            "sellerAgent": null,
+            "showCountyLink": false,
+            "attributeSource": {
+                "infoString2": "Zillow Rentals",
+                "infoString3": null,
+                "infoString1": null
+            },
+            "pricePerSquareFoot": 1,
+            "buyerAgent": null,
+            "event": "Listed for rent",
+            "price": 1245
+        },
+        {
+            "priceChangeRate": 1.6363636363636,
+            "date": "2024-06-03",
+            "source": "Public Record",
+            "postingIsRental": false,
+            "time": 1717372800000,
+            "sellerAgent": null,
+            "showCountyLink": false,
+            "attributeSource": {
+                "infoString2": "Public Record",
+                "infoString3": null,
+                "infoString1": null
+            },
+            "pricePerSquareFoot": 105,
+            "buyerAgent": null,
+            "event": "Sold",
+            "price": 145000
+        },
+        {
+            "priceChangeRate": -0.081803005008347,
+            "date": "2024-03-18",
+            "source": "MLS Now",
+            "postingIsRental": false,
+            "time": 1710720000000,
+            "sellerAgent": null,
+            "showCountyLink": false,
+            "attributeSource": {
+                "infoString2": "MLS Now",
+                "infoString3": "https://photos.zillowstatic.com/fp/b1317fb3313d4b51bf8c479af4716469-zillow_web_logo_inf_11.jpg",
+                "infoString1": "5009060"
+            },
+            "pricePerSquareFoot": 40,
+            "buyerAgent": {
+                "name": "Steve Yoak",
+                "photo": null,
+                "profileUrl": "/profile/steveyoak44/"
+            },
+            "event": "Sold",
+            "price": 55000
+        },
+        {
+            "priceChangeRate": 0,
+            "date": "2024-02-09",
+            "source": "MLS Now",
+            "postingIsRental": false,
+            "time": 1707436800000,
+            "sellerAgent": null,
+            "showCountyLink": false,
+            "attributeSource": {
+                "infoString2": "MLS Now",
+                "infoString3": "https://photos.zillowstatic.com/fp/b1317fb3313d4b51bf8c479af4716469-zillow_web_logo_inf_11.jpg",
+                "infoString1": "5009060"
+            },
+            "pricePerSquareFoot": 43,
+            "buyerAgent": null,
+            "event": "Pending sale",
+            "price": 59900
+        },
+        {
+            "priceChangeRate": -0.14306151645207,
+            "date": "2024-01-23",
+            "source": "MLS Now",
+            "postingIsRental": false,
+            "time": 1705968000000,
+            "sellerAgent": null,
+            "showCountyLink": false,
+            "attributeSource": {
+                "infoString2": "MLS Now",
+                "infoString3": "https://photos.zillowstatic.com/fp/b1317fb3313d4b51bf8c479af4716469-zillow_web_logo_inf_11.jpg",
+                "infoString1": "5009060"
+            },
+            "pricePerSquareFoot": 43,
+            "buyerAgent": null,
+            "event": "Price change",
+            "price": 59900
+        },
+        {
+            "priceChangeRate": 0.29444444444444,
+            "date": "2024-01-02",
+            "source": "MLS Now",
+            "postingIsRental": false,
+            "time": 1704153600000,
+            "sellerAgent": null,
+            "showCountyLink": false,
+            "attributeSource": {
+                "infoString2": "MLS Now",
+                "infoString3": "https://photos.zillowstatic.com/fp/b1317fb3313d4b51bf8c479af4716469-zillow_web_logo_inf_11.jpg",
+                "infoString1": "5009060"
+            },
+            "pricePerSquareFoot": 51,
+            "buyerAgent": null,
+            "event": "Listed for sale",
+            "price": 69900
+        },
+        {
+            "priceChangeRate": 0,
+            "date": "1998-04-17",
+            "source": "Public Record",
+            "postingIsRental": false,
+            "time": 892771200000,
+            "sellerAgent": null,
+            "showCountyLink": false,
+            "attributeSource": {
+                "infoString2": "Public Record",
+                "infoString3": null,
+                "infoString1": null
+            },
+            "pricePerSquareFoot": 39,
+            "buyerAgent": null,
+            "event": "Sold",
+            "price": 54000
+        }
+    ],
+    "taxHistory": [
+        {
+            "time": 1698167634785,
+            "valueIncreaseRate": 0.29210296,
+            "taxIncreaseRate": 0.12102929,
+            "taxPaid": 1286,
+            "value": 25050
+        },
+        {
+            "time": 1666631634785,
+            "valueIncreaseRate": 0,
+            "taxIncreaseRate": 0.0010647092,
+            "taxPaid": 1147.16,
+            "value": 19387
+        },
+        {
+            "time": 1635095634785,
+            "valueIncreaseRate": 0,
+            "taxIncreaseRate": 0,
+            "taxPaid": 1145.94,
+            "value": 19387
+        },
+        {
+            "time": 1603559634785,
+            "valueIncreaseRate": 0.2517433,
+            "taxIncreaseRate": 0,
+            "taxPaid": null,
+            "value": 19387
+        },
+        {
+            "time": 1571937234785,
+            "valueIncreaseRate": -0.00012911556,
+            "taxIncreaseRate": -0.108890966,
+            "taxPaid": 990.04,
+            "value": 15488
+        },
+        {
+            "time": 1540401234785,
+            "valueIncreaseRate": 0,
+            "taxIncreaseRate": 0.027846625,
+            "taxPaid": 1111.02,
+            "value": 15490
+        },
+        {
+            "time": 1508865234785,
+            "valueIncreaseRate": -0.11079219,
+            "taxIncreaseRate": 0,
+            "taxPaid": 1080.92,
+            "value": 15490
+        },
+        {
+            "time": 1477329234785,
+            "valueIncreaseRate": 0,
+            "taxIncreaseRate": 0,
+            "taxPaid": 1080.92,
+            "value": 17420
+        },
+        {
+            "time": 1445706834785,
+            "valueIncreaseRate": 0,
+            "taxIncreaseRate": 0.0053386316,
+            "taxPaid": 1080.92,
+            "value": 17420
+        },
+        {
+            "time": 1414170834785,
+            "valueIncreaseRate": -0.17244655,
+            "taxIncreaseRate": -0.14190166,
+            "taxPaid": 1075.18,
+            "value": 17420
+        },
+        {
+            "time": 1382634834785,
+            "valueIncreaseRate": 0,
+            "taxIncreaseRate": 0.15486288,
+            "taxPaid": 1252.98,
+            "value": 21050
+        },
+        {
+            "time": 1351098834785,
+            "valueIncreaseRate": 4.7508194e-05,
+            "taxIncreaseRate": 0.0055981134,
+            "taxPaid": 1084.96,
+            "value": 21050
+        },
+        {
+            "time": 1319476434785,
+            "valueIncreaseRate": -0.041004147,
+            "taxIncreaseRate": 0.026077075,
+            "taxPaid": 1078.92,
+            "value": 21049
+        },
+        {
+            "time": 1287940434785,
+            "valueIncreaseRate": 0,
+            "taxIncreaseRate": 0,
+            "taxPaid": 1051.5,
+            "value": 21949
+        },
+        {
+            "time": 1256404434785,
+            "valueIncreaseRate": 0,
+            "taxIncreaseRate": 0,
+            "taxPaid": null,
+            "value": 21949
+        },
+        {
+            "time": 1224868434785,
+            "valueIncreaseRate": -0.0520019,
+            "taxIncreaseRate": 0.11648885,
+            "taxPaid": 1123.88,
+            "value": 21949
+        },
+        {
+            "time": 1193246034785,
+            "valueIncreaseRate": 0,
+            "taxIncreaseRate": 0.038202085,
+            "taxPaid": 1006.62,
+            "value": 23153
+        },
+        {
+            "time": 1161710034785,
+            "valueIncreaseRate": 0,
+            "taxIncreaseRate": 0.032896563,
+            "taxPaid": 969.58,
+            "value": 23153
+        },
+        {
+            "time": 1130174034785,
+            "valueIncreaseRate": 0.09719458,
+            "taxIncreaseRate": 0,
+            "taxPaid": 938.7,
+            "value": 23153
+        },
+        {
+            "time": 1098638034785,
+            "valueIncreaseRate": 0,
+            "taxIncreaseRate": 0,
+            "taxPaid": null,
+            "value": 21102
+        },
+        {
+            "time": 1067015634785,
+            "valueIncreaseRate": 0,
+            "taxIncreaseRate": 0.0023879195,
+            "taxPaid": 722,
+            "value": 21102
+        },
+        {
+            "time": 1035479634785,
+            "valueIncreaseRate": 0.52328014,
+            "taxIncreaseRate": 0.34516117,
+            "taxPaid": 720.28,
+            "value": 21102
+        },
+        {
+            "time": 1003943634785,
+            "valueIncreaseRate": 0,
+            "taxIncreaseRate": 0.081300505,
+            "taxPaid": 535.46,
+            "value": 13853
+        },
+        {
+            "time": 972407634785,
+            "valueIncreaseRate": 0,
+            "taxIncreaseRate": 0,
+            "taxPaid": 495.2,
+            "value": 13853
+        }
+    ]
+}

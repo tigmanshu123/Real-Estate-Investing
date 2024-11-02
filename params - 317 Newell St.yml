@@ -1,0 +1,57 @@
+property_location:
+  street_address: "317 Newell St" # Needed for reference, not calculation
+  zip_code: "44203" # Must be 5 digits and needed mandatorily
+  city: "Barberton" # Not necessarily needed as it will be computed from the zip code
+  state: "OH" # Not necessarily needed as it will be computed from the zip code
+
+property_details:
+  type: 'SingleFamily' # SingleFamily, MultiFamily, Condo, Townhouse, Apartment 
+  number_of_bedrooms: 3
+  number_of_bathrooms: 2
+  year_rehabbed: ""
+  amenities_to_search: ["hospital", "school", "restaurant", "park", "pharmacy", "bank", "grocery"]
+
+deal_information:
+  purchase_price: 145000
+
+mortgage_information:
+  down_payment: 36250
+  interest_rate: 7.125
+  tenure_years: 30
+
+income_information:
+  expected_rent_biggerpockets: 1400
+  expected_rent_rtr: ""
+
+
+expense_information:
+  vacancy_rate_percent: 5  # typically ranges b/w 3-10%, 5% is a good starting point
+  monthly_repair_percent: 10 # 7% if A-<='Age'<=A+; 13% if D<='Age'<=B-; 10% otherwise; (typically ranges between 5-15%), 10% is a good starting point
+  monthly_capex_percent: 10 # 7% if A-<='Age'<=A+; 13% if D<='Age'<=B-; 10% otherwise; (typically ranges between 5-15%), 10% is a good starting point
+  annual_taxes: 2500 # See county OR zillow data: https://www.zillow.com/
+  pm_monthly_percent: 10.00 # property management recurring monthly fee typically ranges b/w 8-12%, 10% is a good starting point
+  pm_fee_number_of_months: 1 # typically ranges b/w 6-12 months, 12 months is a good starting point
+  no_rent_initial_period_months: 2 # typically ranges b/w 1-2 months, 2 months is a good starting point
+  number_free_pm_years: 1 # Some turnkey providers offer free PM for the first year
+  annual_insurance: 500 # Check out on https://www.policygenius.com/ or https://www.zillow.com/
+  capex_rehab_appliances_one_time: 0
+  monthly_water_sewer_garbage: 0 # Check out on https://www.zillow.com/
+  monthly_gas_electricity: 0 # Check out on https://www.zillow.com/
+  monthly_hoa: 0 # Check out on https://www.zillow.com/
+  monthly_snow_removal: 0
+  monthly_lawn_care: 0
+  closing_cost_%_one_time: 7 # typically ranges b/w 5-10%, 7% is a good starting point 
+  monthly_other: 0 # Any additional monthly expenses
+  one_time_other_incl_rehab: 0 # Any additional one-time expenses
+
+future_assumptions:
+  annual_rent_growth_percent: 2.5 # Area specific will be calculated based on historical data and used in "baseline scenario"; generally ranges between 1-3%
+  annual_appreciation_percent: 2 # Area specific will be calculated based on historical data and used in "baseline scenario"; generally ranges between 1-3%
+  annual_tax_growth_percent: 2.5 # generally matches with annual inflation rate
+  annual_insurance_growth_percent: 4 # typically ranges b/w 3-5%, 4% is a good starting point
+  annual_water_sewer_garbage_growth_percent: 0 # typically matches with annual inflation rate
+  broker_fee_at_sale_percent: 8 # typically includes 6% as commission (buyer and seller) and 2% in other fees such as staging, cleaning, attorney, appraisal, inspection, clearing (taxes, utilities), etc.
+  annual_hoa_growth_percent: 0 # See CC&R or HOA documents for the annual increase rate 
+
+Generative_AI:
+  LLM_model: "gpt-4o"

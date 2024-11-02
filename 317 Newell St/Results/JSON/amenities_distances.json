@@ -1,0 +1,32 @@
+{
+    "hospital": {
+        "address": "NOT_FOUND",
+        "distance": "NOT_FOUND",
+        "duration": "NOT_FOUND"
+    },
+    "school": {
+        "address": "555 Barber Road, Barberton",
+        "distance": "1.0 km",
+        "duration": "2 mins"
+    },
+    "restaurant": {
+        "address": "343 4th Street Northwest, Barberton",
+        "distance": "0.4 km",
+        "duration": "1 min"
+    },
+    "park": {
+        "address": "Municipal Building, 500 West Hopocan Avenue, Barberton",
+        "distance": "0.3 km",
+        "duration": "1 min"
+    },
+    "bank": {
+        "address": "532 Wooster Road West, Barberton",
+        "distance": "1.2 km",
+        "duration": "3 mins"
+    },
+    "grocery": {
+        "address": "Barberton",
+        "distance": "0.8 km",
+        "duration": "2 mins"
+    }
+}

@@ -1,0 +1,51 @@
+
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #555;
+    }
+    .cover {
+        text-align: center;
+        margin-top: 100px;
+    }
+    .logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 100px;
+    }
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 28px;
+        font-weight: bold;
+        color: #333;
+    }
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+    }
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    table, th, td {
+        border: 1px solid black;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+    

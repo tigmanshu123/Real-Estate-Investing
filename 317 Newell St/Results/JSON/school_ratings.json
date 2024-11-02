@@ -1,0 +1,25 @@
+{
+    "schools": [
+        {
+            "name": "Barberton Middle School",
+            "rating": 5,
+            "distance": 0.3,
+            "level": "Elementary",
+            "type": "Public"
+        },
+        {
+            "name": "Barberton High School",
+            "rating": 4,
+            "distance": 0.5,
+            "level": "High",
+            "type": "Public"
+        },
+        {
+            "name": "Barberton Elementary School East",
+            "rating": 5,
+            "distance": 0.9,
+            "level": "Elementary",
+            "type": "Public"
+        }
+    ]
+}
