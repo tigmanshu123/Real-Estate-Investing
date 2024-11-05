@@ -151,168 +151,168 @@
     ],
     "taxHistory": [
         {
-            "time": 1698894546203,
+            "time": 1699205030535,
             "valueIncreaseRate": 0.29210296,
             "taxIncreaseRate": 0.12102929,
             "taxPaid": 1286,
             "value": 25050
         },
         {
-            "time": 1667358546203,
+            "time": 1667665430535,
             "valueIncreaseRate": 0,
             "taxIncreaseRate": 0.0010647092,
             "taxPaid": 1147.16,
             "value": 19387
         },
         {
-            "time": 1635822546203,
+            "time": 1636129430535,
             "valueIncreaseRate": 0,
             "taxIncreaseRate": 0,
             "taxPaid": 1145.94,
             "value": 19387
         },
         {
-            "time": 1604290146203,
+            "time": 1604597030535,
             "valueIncreaseRate": 0.2517433,
             "taxIncreaseRate": 0,
             "taxPaid": null,
             "value": 19387
         },
         {
-            "time": 1572664146203,
+            "time": 1572974630535,
             "valueIncreaseRate": -0.00012911556,
             "taxIncreaseRate": -0.108890966,
             "taxPaid": 990.04,
             "value": 15488
         },
         {
-            "time": 1541128146203,
+            "time": 1541438630535,
             "valueIncreaseRate": 0,
             "taxIncreaseRate": 0.027846625,
             "taxPaid": 1111.02,
             "value": 15490
         },
         {
-            "time": 1509592146203,
+            "time": 1509902630535,
             "valueIncreaseRate": -0.11079219,
             "taxIncreaseRate": 0,
             "taxPaid": 1080.92,
             "value": 15490
         },
         {
-            "time": 1478056146203,
+            "time": 1478363030535,
             "valueIncreaseRate": 0,
             "taxIncreaseRate": 0,
             "taxPaid": 1080.92,
             "value": 17420
         },
         {
-            "time": 1446437346203,
+            "time": 1446744230535,
             "valueIncreaseRate": 0,
             "taxIncreaseRate": 0.0053386316,
             "taxPaid": 1080.92,
             "value": 17420
         },
         {
-            "time": 1414897746203,
+            "time": 1415208230535,
             "valueIncreaseRate": -0.17244655,
             "taxIncreaseRate": -0.14190166,
             "taxPaid": 1075.18,
             "value": 17420
         },
         {
-            "time": 1383361746203,
+            "time": 1383672230535,
             "valueIncreaseRate": 0,
             "taxIncreaseRate": 0.15486288,
             "taxPaid": 1252.98,
             "value": 21050
         },
         {
-            "time": 1351825746203,
+            "time": 1352136230535,
             "valueIncreaseRate": 4.7508194e-05,
             "taxIncreaseRate": 0.0055981134,
             "taxPaid": 1084.96,
             "value": 21050
         },
         {
-            "time": 1320203346203,
+            "time": 1320510230535,
             "valueIncreaseRate": -0.041004147,
             "taxIncreaseRate": 0.026077075,
             "taxPaid": 1078.92,
             "value": 21049
         },
         {
-            "time": 1288667346203,
+            "time": 1288974230535,
             "valueIncreaseRate": 0,
             "taxIncreaseRate": 0,
             "taxPaid": 1051.5,
             "value": 21949
         },
         {
-            "time": 1257134946203,
+            "time": 1257441830535,
             "valueIncreaseRate": 0,
             "taxIncreaseRate": 0,
             "taxPaid": null,
             "value": 21949
         },
         {
-            "time": 1225595346203,
+            "time": 1225905830535,
             "valueIncreaseRate": -0.0520019,
             "taxIncreaseRate": 0.11648885,
             "taxPaid": 1123.88,
             "value": 21949
         },
         {
-            "time": 1193972946203,
+            "time": 1194283430535,
             "valueIncreaseRate": 0,
             "taxIncreaseRate": 0.038202085,
             "taxPaid": 1006.62,
             "value": 23153
         },
         {
-            "time": 1162440546203,
+            "time": 1162747430535,
             "valueIncreaseRate": 0,
             "taxIncreaseRate": 0.032896563,
             "taxPaid": 969.58,
             "value": 23153
         },
         {
-            "time": 1130904546203,
+            "time": 1131211430535,
             "valueIncreaseRate": 0.09719458,
             "taxIncreaseRate": 0,
             "taxPaid": 938.7,
             "value": 23153
         },
         {
-            "time": 1099368546203,
+            "time": 1099675430535,
             "valueIncreaseRate": 0,
             "taxIncreaseRate": 0,
             "taxPaid": null,
             "value": 21102
         },
         {
-            "time": 1067746146203,
+            "time": 1068053030535,
             "valueIncreaseRate": 0,
             "taxIncreaseRate": 0.0023879195,
             "taxPaid": 722,
             "value": 21102
         },
         {
-            "time": 1036210146203,
+            "time": 1036517030535,
             "valueIncreaseRate": 0.52328014,
             "taxIncreaseRate": 0.34516117,
             "taxPaid": 720.28,
             "value": 21102
         },
         {
-            "time": 1004674146203,
+            "time": 1004981030535,
             "valueIncreaseRate": 0,
             "taxIncreaseRate": 0.081300505,
             "taxPaid": 535.46,
             "value": 13853
         },
         {
-            "time": 973138146203,
+            "time": 973445030535,
             "valueIncreaseRate": 0,
             "taxIncreaseRate": 0,
             "taxPaid": 495.2,

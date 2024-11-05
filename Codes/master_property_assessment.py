@@ -107,14 +107,16 @@ def run_property_assessment(param_file_path):
 
     # Generate the documentation
     doc.generate_all_markdown_files(street_address, openai_api_key, openai_model)
-  
+    doc.generate_appendix(street_address)
+    doc.generate_pdf_from_md_files(street_address, full_address)
 
     elapsed_time = time.time() - start_time
     mins, secs = divmod(elapsed_time, 60)
     print(f"Property assessment for {full_address} completed in time (mins:secs): {int(mins)}:{int(secs)}")
 
     
-    # Complete documentation for all chapters
+    # Create cover page
+    # Create Exec Summary
     # Integrate all chapters into 1 report with images and logo
 
     # pending scenario analysis

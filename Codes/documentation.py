@@ -1,6 +1,7 @@
 import openai
 import os
 from markdown2 import markdown
+import markdown
 import pdfkit
 from pathlib import Path
 import json
@@ -8,98 +9,6 @@ import shutil
 import glob
 from datetime import datetime
 from fpdf import FPDF
-
-
-# def convert_md_to_pdf(md_path, md_filename, output_path):
-#     """
-#     Converts a markdown file to a PDF file using pdfkit.
-#     Args:
-#         md_path (str): The path to the markdown file.
-#         md_filename (str): The name of the markdown file (without extension).
-#         output_path (str): The path where the output PDF should be saved.
-#     """
-#     # Construct the full path to the markdown file
-#     path = md_path + '/Documentation/MD Files/'
-#     md_file_path = os.path.join(path, md_filename + '.md')
-
-#     # Read the markdown file content
-#     with open(md_file_path, 'r') as md_file:
-#         md_content = md_file.read()
-
-#     # Convert markdown content to HTML
-#     html_content = markdown(md_content, extras=["tables"])
-
-#     # Define a basic CSS style to enhance the PDF appearance
-#     css = """
-#     body {
-#         font-family: Arial, sans-serif;
-#         margin: 20px;
-#     }
-#     h1 {
-#         color: #333;
-#         border-bottom: 2px solid #ddd;
-#         padding-bottom: 10px;
-#     }
-#     p {
-#         line-height: 1.6;
-#     }
-#     ul, ol {
-#         margin: 20px 0;
-#         padding-left: 40px;
-#     }
-#     ul li, ol li {
-#         margin: 5px 0;
-#     }
-#     ul ul, ol ol {
-#         margin: 0;
-#         padding-left: 20px;
-#     }
-#     ul li:before {
-#         content: "• ";
-#         color: #555;
-#     }
-#     table {
-#         width: 100%;
-#         border-collapse: collapse;
-#         margin: 20px 0;
-#     }
-#     table, th, td {
-#         border: 1px solid #ddd;
-#     }
-#     th, td {
-#         padding: 8px;
-#         text-align: left;
-#     }
-#     th {
-#         background-color: #f2f2f2;
-#     }
-#     """
-
-#     # Combine HTML content with CSS
-#     html_with_css = f"<html><head><style>{css}</style></head><body>{html_content}</body></html>"
-
-#     # Convert HTML content to PDF using pdfkit
-#     out_path = output_path + '/Documentation/PDF Files/'
-#     os.makedirs(out_path, exist_ok=True)
-#     pdf_file_path = os.path.join(out_path, md_filename + '.pdf')
-    
-#     # Define the path to wkhtmltopdf executable (Update the path if needed)
-#     path_to_wkhtmltopdf = r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"
-#     config = pdfkit.configuration(wkhtmltopdf=path_to_wkhtmltopdf)
-    
-#     # Generate the PDF
-#     options = {
-#         'page-size': 'A4',
-#         'margin-top': '0.75in',
-#         'margin-right': '0.75in',
-#         'margin-bottom': '0.75in',
-#         'margin-left': '0.75in',
-#         'encoding': "UTF-8",
-#         'no-outline': None  # Optional: Remove links from PDF outline
-#     }
-#     pdfkit.from_string(html_with_css, pdf_file_path, configuration=config, options=options)
-
-
 
 
 def generate_chapter_md(street_address, json_name, chapter_title, openai_api_key, openai_model, base_prompt, system_role):
@@ -203,6 +112,8 @@ def post_process_markdown_files(street_address):
                 if line.startswith("#"):
                     line = "##" + line.lstrip("#")
                 updated_content.append(line)
+                # Replace '$' with '$'
+                line = line.replace('\\$', '$')
 
             with open(md_file_path, 'w') as file:
                 file.writelines(updated_content)
@@ -363,5 +274,167 @@ def generate_all_markdown_files(street_address, openai_api_key, openai_model):
 
 
 
+def generate_appendix(street_address):
+
+    # Set the working directory to the markdown files directory
+    os.chdir(os.path.join(street_address, "Documentation", "MD Files"))
+
+    md_directory = os.getcwd()
+
+    # Create directory if it does not exist
+    if not os.path.exists(md_directory):
+        os.makedirs(md_directory)
+
+    # Appendix Content
+    appendix_content = """
+    # Appendix
+
+    **Additional Images:**
+    """
+    images_directory = os.path.join("..", "..", "Images").replace('\\', '/')
+    for image_file in os.listdir(images_directory):
+        if image_file.endswith(".jpg") or image_file.endswith(".png"):
+            if image_file != "Zillow_Image_1.jpg":
+                image_path = os.path.join(images_directory, image_file).replace('\\', '/')
+                appendix_content += f"\n![]({image_path})\n"
+
+    appendix_content += f"""
+    
+    **Legal Disclaimer:**
+    The information provided in this document is for informational purposes only and is not intended as legal or financial advice. Please consult a professional for specific advice regarding your investment.
+    """
+    appendix_file_path = os.path.join(md_directory, "Appendix.md")
+    with open(appendix_file_path, 'w') as file:
+        file.write(appendix_content)
+
+    # Change the working directory back to one level up from the root
+    os.chdir(os.path.join(street_address, "..", "..", "..", ".."))
 
 
+
+def generate_pdf_from_md_files(street_address, full_address):
+    # Define directory for Markdown files
+    md_directory = os.path.join(street_address, "Documentation", "MD Files")
+    pdf_directory = os.path.join(street_address, "Documentation", "PDF Files")
+
+    # Create PDF directory if it does not exist
+    if not os.path.exists(pdf_directory):
+        os.makedirs(pdf_directory)
+
+    # Order of markdown files to be combined
+    md_files_order = [
+        "Performance Analysis.md", "Cash Flow & Expenses.md", "Mortgage.md", "Location (by Niche).md",
+        "Property Characteristics.md", "School Ratings.md", "Nearby Amenity.md", "Tax History.md", "Rent Estimation.md", "Appendix.md"
+    ]
+
+    combined_html_content = ""
+    toc_html_content = "<h1>Table of Contents</h1><ul>"
+    chapter_number = 1
+
+    # Read and convert each markdown file to HTML
+    for md_file in md_files_order:
+        md_file_path = os.path.join(md_directory, md_file)
+        if os.path.exists(md_file_path):
+            with open(md_file_path, 'r') as file:
+                md_content = file.read()
+                # Convert relative image paths to absolute paths using regex
+                # md_content = re.sub(r'!\[\]\((.*?)\)', lambda match: f"![]({os.path.abspath(os.path.join(md_directory, match.group(1)))})" if not os.path.isabs(match.group(1)) else match.group(0), md_content)
+                # Convert relative image paths to absolute paths
+                md_content = md_content.replace('![](', f'![]({os.path.abspath(os.path.join(md_directory, "../../"))}')
+                md_content = md_content.replace("\\", "/")
+                md_content = md_content.replace("../../", "/")
+                html_content = markdown.markdown(md_content, extensions=['extra', 'tables', 'md_in_html'])
+                chapter_title = f"Chapter {chapter_number}: {os.path.splitext(md_file)[0]}"
+                toc_html_content += f"<li><a href='#chapter{chapter_number}'>{chapter_title}</a></li>"
+                combined_html_content += f"<h1 id='chapter{chapter_number}'>{chapter_title}</h1>" + html_content + "<br><br>"
+                chapter_number += 1
+
+    toc_html_content += "</ul><br><br>"
+    combined_html_content = toc_html_content + combined_html_content
+
+    # Define enhanced CSS styling
+    css_content = """
+    <style>
+    @page {
+        size: A4;
+        margin: 1in;
+    }
+    body {
+        font-family: 'Times New Roman', serif;
+        line-height: 1.8;
+        color: #333;
+        font-size: 18pt;
+    }
+    h1 {
+        color: #1A5276;
+        font-size: 24pt;
+        text-align: center;
+        border-bottom: 2px solid #1A5276;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        page-break-before: always;
+    }
+    h2 {
+        color: #2874A6;
+        font-size: 20pt;
+        border-bottom: 1px solid #2874A6;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+    h3, h4 {
+        color: #2E86C1;
+        font-size: 16pt;
+    }
+    img {
+        display: block;
+        margin: 20px auto;
+        max-width: 90%;
+        border: 1px solid #ddd;
+        padding: 5px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    p {
+        text-align: justify;
+        margin-bottom: 15px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+        color: #333;
+    }
+    a {
+        color: #1A5276;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    </style>
+    """
+
+    # Combine HTML content and CSS styling
+    final_html_content = f"<!DOCTYPE html><html><head>{css_content}</head><body>{combined_html_content}</body></html>"
+
+    # Define PDFKit options
+    options = {
+        'quiet': '',
+        'enable-local-file-access': ''  # Allows access to local images and resources
+    }
+
+    # Generate PDF from combined HTML content with CSS styling
+    pdf_file_path = os.path.join(pdf_directory, f"Investment Property Report - {full_address}.pdf")
+    try:
+        pdfkit.from_string(final_html_content, pdf_file_path, options=options)
+    except OSError as e:
+        print(f"Error generating PDF: {e}")
