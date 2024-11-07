@@ -1,28 +1,22 @@
-## Estimated Rent Analysis
+## Estimated Rent Table
 
-| Type           | Estimated Rent |
-|----------------|----------------|
-| Median Rent    | $1389.00       |
-| Average Rent   | $1383.00       |
-| 25th Percentile| $1284.63       |
-| 75th Percentile| $1372.88       |
+| Type            | Estimated Rent  |
+|-----------------|-----------------|
+| Median Rent     | $1360.33        |
+| Average Rent    | $1357.67        |
+| 25th Percentile | $1262.38        |
+| 75th Percentile | $1348.00        |
 
-## Summary and Assessment
+## Summary Assessment
 
-In analyzing the data from the JSON:
+The estimated rents data provided indicate a relatively narrow range of rental prices. The **median rent** stands at $1360.33, closely aligning with the **average rent** of $1357.67. This proximity between median and average suggests a balanced distribution of rent prices in the dataset without significant skewness. Moreover, the **25th percentile** of the estimated rent is $1262.38, indicating that 25% of the rental estimates fall below this value, while the **75th percentile** is at $1348.00, indicating that 25% are above this threshold.
 
-- The **Median Rent** is $1389.00, indicating that half of the rent estimates are at or below this value. This shows a stable central tendency in the rent estimates.
-- The **Average Rent** is relatively close at $1383.00, slightly lower than the median, suggesting a minor skewness to the lower end in the rent distribution.
-- The **25th Percentile** value of $1284.63 denotes the lower quartile of the dataset, representing that a quarter of the estimate falls below this rent. This provides insight into the lower range of the rental market.
-- The **75th Percentile** at $1372.88 highlights the upper quartile, informing us that 25% of the estimates are above this figure, capturing higher-end rental pricing.
+The relatively close values between these percentiles and the median—specifically, a $97.95 difference between the 25th percentile and the median, and a $12.33 difference between the median and the 75th percentile—suggests a tight clustering of rent values. This lack of extensive variability may imply stability in the rental market represented by this data set. 
+
+## Risks and Trends
+
+- **Narrow Range of Rent Estimates**: The narrow spread from the 25th to the 75th percentile indicates the estimated rents do not vary widely, suggesting a potential risk if market conditions abruptly change, as there may not be substantial rental options across different price points.
   
-## Variances and Trends
+- **Potential Data Homogeneity**: The slight variance in the estimates might imply that the data sources (Rentometer, Zillow, User inputs) potentially reflect similar properties or geographical areas lacking diversity. Before making investment decisions, further analysis to include diverse datasets could give a more comprehensive view of rental trends.
 
-The estimated rents present a tight range, with the **Median**, **25th Percentile**, and **75th Percentile** values being close to each other. This indicates a narrow distribution with less volatility in rent prices across different data inputs. The small difference between the average and median values further highlights this limited variance. 
-
-## Risks and Considerations
-
-- **Close Percentile Range**: The proximity of the **25th Percentile ($1284.63)** and **75th Percentile ($1372.88)** points suggests that there is not much variability across the majority of the rental data. This might imply a competitive market where prices are tightly packed, offering limited flexibility for rental increases without risking tenant turnover.
-- The slight skewness indicated by the average being less than the median might hint at the presence of a few lower outliers affecting the mean rent slightly downward. It's crucial to understand these outliers' nature and frequency, as they might represent distressed properties or unique conditions in certain locations.
-
-Overall, the estimated rent data exhibits a consistent pattern with limited variability, signifying a relatively stable rental market. However, the near-range confined within quartiles could potentially limit opportunities for aggressive rental growth strategies.
+Overall, while the tight clustering of data suggests market stability, careful monitoring of external factors influencing rental markets is advised to mitigate unforeseen risks.

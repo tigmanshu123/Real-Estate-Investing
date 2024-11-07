@@ -1,37 +1,37 @@
-## Analysis of Tax History
+## Overview of Tax History
 
-To analyze the tax history of the property, let's review the available data, which outlines changes in property value, tax payments, and increases over time. Below, I summarize the overall trends and any concerns noted.
+Analyzing the tax history data reveals both increases and decreases in property tax and assessed value over time.
 
-- **Property Value Changes**:
-  - From **2001 to 2023**, there have been fluctuations, with notable increases in the property value. For instance, in **2020**, there was a significant value increase rate of roughly **0.25**, boosting the value to **19,387**.
-  - Most recent data from **2023** indicates a value of **25,050**, reflecting a substantial increase from previous years, with a value increase rate of **0.29** in 2023.
+1. **Recent Trends (approximately 2023)**:
+   - The most recent year shows a tax increase rate of **12.10%** with taxes paid amounting to **$1286** and a property value of **$25,050**. The property value increased by **29.21%** compared to the previous year, indicating a notable uptick in assessed value.
 
-- **Tax Payments and Increases**:
-  - The tax paid has seen a consistent upward trend over the years. From **495.20** in **1998**, taxes have increased to **1,286** by **2023**.
-  - A strong tax increase rate was recorded in **2002** at **0.345**, coinciding with one of the major value increases.
-  - Another sharp tax increase occurred in **2023**, where the tax increased by **0.12** to **1,286**.
-  
-- **Fluctuating Patterns**:
-  - There were several years with no change in tax paid or value, such as **2014, 2015**, and **2017**, which could indicate a period of market stabilization or assessment updates.
-  - In **2010**, the tax paid saw a considerable hike of **0.15**, reaching **1,252.98**. This noticeable change was not accompanied by a corresponding value increase.
-  - Various negative value and tax increase rates occasionally suggest reassessments or adjustments, such as the year **2018**, which had a tax and value decrease rate.
+2. **Stability Phase (approximately 2020 - 2022)**:
+   - During this period, the property value remained constant at **$19,387** while the taxes hovered around the **$1,145 - $1,147** mark with marginal tax increase rates, suggesting a phase of stability with negligible property value appreciation.
 
-## Summary and Risks
+3. **Tax Fluctuations in Earlier Years (approximately 2018 - 2019)**:
+   - A substantial **25.17%** increase in property value occurred around 2020, though specific tax paid details are missing for this year.
+   - Prior to 2020, the tax paid decreased by approximately **10.89%** around 2019 with taxes at **$990.04** and a slight decrease in value to **$15,488** suggesting a possibly favorable adjustment for the owner at the time.
 
-The property's tax history reveals a general trend of increasing tax obligations over the past 25 years, with a remarkably pronounced increase over the last decade. The most recent **2023** figures indicate both escalating property value and taxes, which could point to growing market value or reassessment of property standards.
+4. **Consistent Increases and Decreases Early in the Decade (approximately 2010 - 2017)**:
+   - The property experienced slight decreases and increases in value and tax over the years, with notable value depreciation of approximately **17.24%** around 2014, aligning with a decrease in taxes **-14.19%** to **$1,075.18**.
 
-## Potential Risks:
+5. **Long-term Historical Data (2000 and earlier)**:
+   - The data from the early 2000s showed steadier growth trends with a significant **52.33%** value increase hitting **$21,102** around 2002 and a tax paid spike at **$720.28**. Prior decades reflected modest tax increases aligning with economic growth patterns.
 
-1. **Frequent Reevaluation**:
-   - The frequent increases in taxes, particularly the steep rise in **2023**, indicate possible future reevaluation which can further affect the investment's cost structure.
+## Potential Risks
 
-2. **Unsteady Payments**:
-   - The pattern of sharp increases without corresponding property value hikes in some years might reflect policy changes or assessment discrepancies that could reoccur.
+1. **Recent Value Spikes**:
+   - The **29.21%** increase in assessed value in approximately 2023 signals rapid property appreciation which might suggest potential over-assessment risks if such trends do not align with broader market conditions.
 
-3. **Market Volatility**:
-   - If the upward trajectory in value and taxes continues, potential investors should anticipate potential hikes in property costs and adjust their projections accordingly.
+2. **Tax Volatility**:
+   - The fluctuation in taxes paid, particularly the significant **12.10%** increase in the most recent data year, could indicate vulnerability to policy changes or inconsistent assessment approaches.
 
-In conclusion, while the property has shown a favorable increase in value and market desirability, investors should remain vigilant about the tax implications and strategize for potential increases that could affect long-term profitability.
+3. **Inconsistent Evaluation Intervals**:
+   - Missing data points for certain years like 2020, and the sporadic reporting (e.g., complete absence of tax data during the economic downturn phases), might pose challenges in accurately forecasting future tax expectations.
+
+## Summary
+
+Overall, the tax history reflects both stability and volatility across different periods, with recent years showing significant property value and tax increase. The risks are mainly associated with these recent sharp increases and underlying market dynamics, which might indicate either a boom in property demand or potential over-valuation concerns. Monitoring broader economic and regional real estate trends will be crucial to anticipate future tax liabilities effectively.
 
 Below is a chart showing the evolution of the paid tax and assessed value of the property over history (sourced from Zillow)
 

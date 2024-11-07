@@ -95,6 +95,7 @@ def run_property_assessment(param_file_path):
     perf_analysis.compute_zestimate_to_purchase_percent(street_address, current_zestimate, purchase_price)
     perf_analysis.get_school_ratings(street_address,full_address, rapid_api_key)
     perf_analysis.compute_performance_kpis(street_address, param_file_path, full_address, rapid_api_key)
+    perf_analysis.create_exec_summary_perf_table(street_address, purchase_price)
 
     # Location details assessment
     loc_details.get_niche_area_feel(street_address, zip_code, openai_api_key, openai_model)
@@ -106,25 +107,14 @@ def run_property_assessment(param_file_path):
     geo.open_in_maps(full_address,google_maps_api_key)
 
     # Generate the documentation
-    doc.generate_all_markdown_files(street_address, openai_api_key, openai_model)
+    doc.generate_all_markdown_files(street_address, openai_api_key, openai_model, full_address, purchase_price, loan_amount)
     doc.generate_appendix(street_address)
-    doc.generate_pdf_from_md_files(street_address, full_address)
+    doc.generate_pdf_from_md_files(street_address, full_address, ['Mohmeet Kaur', 'Tigmanshu Goyal'])
 
     elapsed_time = time.time() - start_time
     mins, secs = divmod(elapsed_time, 60)
     print(f"Property assessment for {full_address} completed in time (mins:secs): {int(mins)}:{int(secs)}")
 
-    
-    # Create cover page
-    # Create Exec Summary
-    # Integrate all chapters into 1 report with images and logo
-
-    # pending scenario analysis
-    # pending bringing it together in 1 report
-    # pending comparison of multiple properties
-    # pending FEMA data import
-    # consider adding logging
-    # pending cash flow validation
 
 
     

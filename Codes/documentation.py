@@ -9,6 +9,9 @@ import shutil
 import glob
 from datetime import datetime
 from fpdf import FPDF
+from PyPDF2 import PdfMerger
+import pandas as pd
+import json
 
 
 def generate_chapter_md(street_address, json_name, chapter_title, openai_api_key, openai_model, base_prompt, system_role):
@@ -138,7 +141,60 @@ def post_process_markdown_files(street_address):
 
 
 
-def generate_all_markdown_files(street_address, openai_api_key, openai_model):
+def create_exec_summary_md(street_address, full_address, purchase_price, loan_amount):
+    # Define file paths
+    excel_path = os.path.join(street_address, "Results", "Excels", "Exec_Summary_Performance_KPIs.xlsx")
+    md_path = os.path.join(street_address, "Documentation", "MD Files", "Executive Summary.md")
+    zestimate_path = os.path.join(street_address, "Results", "JSON", "zestimate_to_purchase_percent.json")
+    property_characteristics_path = os.path.join(street_address, "Results", "JSON", "property_characteristics.json")
+    niche_location_assessment_path = os.path.join(street_address, "Results", "JSON", "niche_location_assessment.json")
+    rent_estimates_path = os.path.join(street_address, "Results", "JSON", "final_rent_estimates.json")
+
+    # Load the Excel file
+    df = pd.read_excel(excel_path, sheet_name='Executive Summary')
+
+    # Create markdown table for Performance Analysis Summary
+    markdown_table = df.to_markdown(index=True)
+
+    # Load JSON data
+    with open(zestimate_path, 'r') as file:
+        zestimate_data = json.load(file)
+    with open(property_characteristics_path, 'r') as file:
+        property_characteristics = json.load(file)
+    with open(niche_location_assessment_path, 'r') as file:
+        niche_location_assessment = json.load(file)
+    with open(rent_estimates_path, 'r') as file:
+        rent_estimates = json.load(file)
+
+    # Create property and deal details table
+    property_details = {
+        "Full address": full_address,
+        "Purchase Price": f"${purchase_price}",
+        "Zestimate to Purchase Price %": f"{round(zestimate_data['zestimate_to_purchase_percent'], 2)}%",
+        "Loan Amount": f"${loan_amount}",
+        "Bedrooms": property_characteristics.get('Bedrooms', 'N/A'),
+        "Bathrooms": property_characteristics.get('Bathrooms', 'N/A'),
+        "Year Built": property_characteristics.get('Year Built', 'N/A'),
+        "Home Type": property_characteristics.get('Home Type', 'N/A'),
+        "Niche Area Feel": niche_location_assessment.get('niche_area_feel', 'N/A'),
+        "Niche Overall Grade": niche_location_assessment.get('niche_overall_grade', 'N/A'),
+        "Estimated Median Rent": f"${rent_estimates.get('median_rent', 'N/A')}"
+    }
+
+    property_details_md = "| Property & Deal Details | Value |\n| --- | --- |\n"
+    for key, value in property_details.items():
+        property_details_md += f"| {key} | {value} |\n"
+
+    # Write to markdown file
+    with open(md_path, 'w') as md_file:
+        md_file.write("## Performance Analysis Summary\n")
+        md_file.write(markdown_table)
+        md_file.write("\n\n\n## Property & Deal Details\n")
+        md_file.write(property_details_md)
+
+
+
+def generate_all_markdown_files(street_address, openai_api_key, openai_model, full_address, purchase_price, loan_amount):
 
     generate_chapter_md(
         street_address=street_address, 
@@ -269,6 +325,8 @@ def generate_all_markdown_files(street_address, openai_api_key, openai_model):
         base_prompt="The attached json has the annual Rental Income, Expenses (Vacancy Cost, Repairs, Capex, Taxes, Property Management, Insurance, Others, One time), Mortgage, Cash Flow, for the anticipated tenure of property ownership. Opine and provide a summary of your in-depth analysis. Specifically, also highlight any interesting discounts/offers for property management or other costs - e.g., is that expense 0 in the first year? What does that imply? Highlight any risks that you see. Finally, make sure that the response is formatted in a way which can be directly pasted in a .md file, and then eventually used to convert in a pdf document.", 
         system_role='You are a highly quantitative and proficient real estate consultant. You refer data in the json to make assessments, and in your assessments you mention the data points that you are referring to as much as possible. Ensure any sub-titles introduced in the response are in bold font and only have 2 ##, no more no less. There should be no titles.'
         )
+    
+    create_exec_summary_md(street_address, full_address, purchase_price, loan_amount)
 
     post_process_markdown_files(street_address)
 
@@ -312,7 +370,65 @@ def generate_appendix(street_address):
 
 
 
-def generate_pdf_from_md_files(street_address, full_address):
+def create_cover_page(street_address, author_names, full_address):
+    cover_pdf_path = "cover_page.pdf"
+    
+    # Construct the input PDF path
+    input_pdf_path = os.path.join(street_address, "Documentation", "PDF Files", f"Investment Property Report - {full_address}.pdf")
+    
+    # Create the cover page PDF
+    pdf = FPDF()
+    pdf.add_page()
+    
+    # Set a light background color
+    pdf.set_fill_color(230, 230, 230)  # Light gray background
+    pdf.rect(0, 0, 210, 297, 'F')  # Fill the entire page with the background color
+    
+    # Set the cover title
+    pdf.set_font("Helvetica", "B", size=24)
+    pdf.set_text_color(0, 51, 102)  # Dark blue text for a professional look
+    pdf.cell(200, 40, "Real Estate Investment Analysis Report", ln=True, align="C")
+    pdf.ln(10)
+
+    # Author names
+    pdf.set_font("Helvetica", size=12)
+    pdf.set_text_color(0, 0, 0)  # Black text
+    author_text = ", ".join(author_names)
+    pdf.cell(200, 10, f"Authors: {author_text}", ln=True, align="C")
+    pdf.cell(200, 10, f"Date: {datetime.now().strftime('%B %d, %Y')}", ln=True, align="C")
+    pdf.ln(20)
+
+    # Disclaimer
+    pdf.set_font("Helvetica", size=10)
+    pdf.cell(200, 10, "(c) All rights reserved", ln=True, align="C")
+    pdf.ln(20)
+    
+    # Add property image if it exists
+    image_path = os.path.join(street_address, "Images", "Zillow_Image_1.jpg")
+    if not os.path.exists(image_path):
+        image_path = os.path.join(street_address, "Images", "Zillow_Image_1.png")
+    
+    if os.path.exists(image_path):
+        pdf.image(image_path, x=40, y=100, w=130)
+    else:
+        pdf.set_font("Helvetica", size=10)
+        pdf.cell(200, 10, "Property image not found", ln=True, align="C")
+    
+    # Output the cover page PDF
+    pdf.output(cover_pdf_path)
+    
+    # Merge cover page with the original PDF
+    merger = PdfMerger()
+    merger.append(cover_pdf_path)
+    merger.append(input_pdf_path)
+    merger.write(input_pdf_path)
+    merger.close()
+    
+    # Clean up temporary cover page
+    os.remove(cover_pdf_path)
+
+
+def generate_pdf_from_md_files(street_address, full_address, author_names):
     # Define directory for Markdown files
     md_directory = os.path.join(street_address, "Documentation", "MD Files")
     pdf_directory = os.path.join(street_address, "Documentation", "PDF Files")
@@ -323,7 +439,7 @@ def generate_pdf_from_md_files(street_address, full_address):
 
     # Order of markdown files to be combined
     md_files_order = [
-        "Performance Analysis.md", "Cash Flow & Expenses.md", "Mortgage.md", "Location (by Niche).md",
+        "Executive Summary.md","Performance Analysis.md", "Cash Flow & Expenses.md", "Mortgage.md", "Location (by Niche).md",
         "Property Characteristics.md", "School Ratings.md", "Nearby Amenity.md", "Tax History.md", "Rent Estimation.md", "Appendix.md"
     ]
 
@@ -438,3 +554,7 @@ def generate_pdf_from_md_files(street_address, full_address):
         pdfkit.from_string(final_html_content, pdf_file_path, options=options)
     except OSError as e:
         print(f"Error generating PDF: {e}")
+
+    create_cover_page(street_address, author_names, full_address)
+
+

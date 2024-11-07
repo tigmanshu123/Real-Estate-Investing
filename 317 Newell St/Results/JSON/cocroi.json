@@ -1,188 +1,188 @@
 [
     {
         "Year": 0,
-        "CoCRoI": -7.852283465351582,
-        "Annual Cash Flow": -3444.207834989838,
+        "CoCRoI": -8.201936737888872,
+        "Annual Cash Flow": -3597.5745016565065,
         "Total Investment": 43862.5
     },
     {
         "Year": 1,
-        "CoCRoI": -1.952164101635395,
-        "Annual Cash Flow": -856.2679790798252,
+        "CoCRoI": -2.480156882104665,
+        "Annual Cash Flow": -1087.8588124131586,
         "Total Investment": 43862.5
     },
     {
         "Year": 2,
-        "CoCRoI": -2.1584987411338306,
-        "Annual Cash Flow": -946.7715103298265,
+        "CoCRoI": -2.6929923765475268,
+        "Annual Cash Flow": -1181.213781163159,
         "Total Investment": 43862.5
     },
     {
         "Year": 3,
-        "CoCRoI": -2.0379051122509635,
-        "Annual Cash Flow": -893.8761298610789,
+        "CoCRoI": -2.585761088550001,
+        "Annual Cash Flow": -1134.179457465244,
         "Total Investment": 43862.5
     },
     {
         "Year": 4,
-        "CoCRoI": -1.9068265714006465,
-        "Annual Cash Flow": -836.3818048806086,
+        "CoCRoI": -2.4683789471071664,
+        "Annual Cash Flow": -1082.692715674881,
         "Total Investment": 43862.5
     },
     {
         "Year": 5,
-        "CoCRoI": -1.7650304915944872,
-        "Annual Cash Flow": -774.1864993756319,
+        "CoCRoI": -2.3406216766936696,
+        "Annual Cash Flow": -1026.6551829397608,
         "Total Investment": 43862.5
     },
     {
         "Year": 6,
-        "CoCRoI": -1.6122796100017707,
-        "Annual Cash Flow": -707.1861439370266,
+        "CoCRoI": -2.2022605747284327,
+        "Annual Cash Flow": -965.9665445902588,
         "Total Investment": 43862.5
     },
     {
         "Year": 7,
-        "CoCRoI": -1.4483319592467714,
-        "Annual Cash Flow": -635.2746056246151,
+        "CoCRoI": -2.0530624480915995,
+        "Annual Cash Flow": -900.5245162941778,
         "Total Investment": 43862.5
     },
     {
         "Year": 8,
-        "CoCRoI": -1.2729407988761312,
-        "Annual Cash Flow": -558.343657907043,
+        "CoCRoI": -1.8927895499420893,
+        "Annual Cash Flow": -830.224816343349,
         "Total Investment": 43862.5
     },
     {
         "Year": 9,
-        "CoCRoI": -1.0858545470761718,
-        "Annual Cash Flow": -476.2829507112858,
+        "CoCRoI": -1.721199516918767,
+        "Annual Cash Flow": -754.9611381084942,
         "Total Investment": 43862.5
     },
     {
         "Year": 10,
-        "CoCRoI": -0.8868167127249336,
-        "Annual Cash Flow": -388.979980618974,
+        "CoCRoI": -1.5380453068135895,
+        "Annual Cash Flow": -674.6251227011106,
         "Total Investment": 43862.5
     },
     {
         "Year": 11,
-        "CoCRoI": -0.675565827868966,
-        "Annual Cash Flow": -296.32006124902523,
+        "CoCRoI": -1.3430751368098506,
+        "Annual Cash Flow": -589.1063318832207,
         "Total Investment": 43862.5
     },
     {
         "Year": 12,
-        "CoCRoI": -0.45183538072043183,
-        "Annual Cash Flow": -198.1862938684994,
+        "CoCRoI": -1.1360324223848424,
+        "Annual Cash Flow": -498.29222126855143,
         "Total Investment": 43862.5
     },
     {
         "Year": 13,
-        "CoCRoI": -0.2153537492757411,
-        "Annual Cash Flow": -94.45953827607195,
+        "CoCRoI": -0.9166557169817396,
+        "Annual Cash Flow": -402.06811386111553,
         "Total Investment": 43862.5
     },
     {
         "Year": 14,
-        "CoCRoI": 0.034155864336644325,
-        "Annual Cash Flow": 14.981615994660617,
+        "CoCRoI": -0.68467865256201,
+        "Annual Cash Flow": -300.3171739800116,
         "Total Investment": 43862.5
     },
     {
         "Year": 15,
-        "CoCRoI": 0.2969754986655694,
-        "Annual Cash Flow": 130.2608781021854,
+        "CoCRoI": -0.4398298811555597,
+        "Annual Cash Flow": -192.92038162185736,
         "Total Investment": 43862.5
     },
     {
         "Year": 16,
-        "CoCRoI": 0.5733924967834013,
-        "Annual Cash Flow": 251.50428390161937,
+        "CoCRoI": -0.1818330175332416,
+        "Annual Cash Flow": -79.75650731551809,
         "Total Investment": 43862.5
     },
     {
         "Year": 17,
-        "CoCRoI": 0.8636995690415287,
-        "Annual Cash Flow": 378.8402234708405,
+        "CoCRoI": 0.08959341686695485,
+        "Annual Cash Flow": 39.29791247326807,
         "Total Investment": 43862.5
     },
     {
         "Year": 18,
-        "CoCRoI": 1.1681948546003431,
-        "Annual Cash Flow": 512.3994680990755,
+        "CoCRoI": 0.3747360486214085,
+        "Annual Cash Flow": 164.36859932656532,
         "Total Investment": 43862.5
     },
     {
         "Year": 19,
-        "CoCRoI": 1.4871819815915635,
-        "Annual Cash Flow": 652.3151966755995,
+        "CoCRoI": 0.6738867054631527,
+        "Annual Cash Flow": 295.58355618377533,
         "Total Investment": 43862.5
     },
     {
         "Year": 20,
-        "CoCRoI": 1.8209701257621134,
-        "Annual Cash Flow": 798.723021412407,
+        "CoCRoI": 0.9873424677305062,
+        "Annual Cash Flow": 433.07308990829324,
         "Total Investment": 43862.5
     },
     {
         "Year": 21,
-        "CoCRoI": 2.1698740674411328,
-        "Annual Cash Flow": 951.7610128313668,
+        "CoCRoI": 1.3154057179587282,
+        "Annual Cash Flow": 576.9698330396471,
         "Total Investment": 43862.5
     },
     {
         "Year": 22,
-        "CoCRoI": 2.534214246661863,
-        "Annual Cash Flow": 1111.5697239420597,
+        "CoCRoI": 1.658384188442401,
+        "Annual Cash Flow": 727.4087646555481,
         "Total Investment": 43862.5
     },
     {
         "Year": 23,
-        "CoCRoI": 2.91431681626227,
-        "Annual Cash Flow": 1278.2922135330382,
+        "CoCRoI": 2.016591006587315,
+        "Annual Cash Flow": 884.5272302643612,
         "Total Investment": 43862.5
     },
     {
         "Year": 24,
-        "CoCRoI": 3.3105136927772163,
-        "Annual Cash Flow": 1452.0740684944067,
+        "CoCRoI": 2.390344737860391,
+        "Annual Cash Flow": 1048.464960644014,
         "Total Investment": 43862.5
     },
     {
         "Year": 25,
-        "CoCRoI": 3.7231426049259704,
-        "Annual Cash Flow": 1633.0634250856538,
+        "CoCRoI": 2.779969426136218,
+        "Annual Cash Flow": 1219.3640895389985,
         "Total Investment": 43862.5
     },
     {
         "Year": 26,
-        "CoCRoI": 4.152547139487621,
-        "Annual Cash Flow": 1821.4109890577577,
+        "CoCRoI": 3.1857946312281236,
+        "Annual Cash Flow": 1397.3691701224357,
         "Total Investment": 43862.5
     },
     {
         "Year": 27,
-        "CoCRoI": 4.599076784346256,
-        "Annual Cash Flow": 2017.2700545338766,
+        "CoCRoI": 3.608155463380283,
+        "Annual Cash Flow": 1582.6271901251766,
         "Total Investment": 43862.5
     },
     {
         "Year": 28,
-        "CoCRoI": 5.063086968476059,
-        "Annual Cash Flow": 2220.796521547811,
+        "CoCRoI": 4.047392614485933,
+        "Annual Cash Flow": 1775.2875855288924,
         "Total Investment": 43862.5
     },
     {
         "Year": 29,
-        "CoCRoI": 5.544939098624205,
-        "Annual Cash Flow": 2432.148912134042,
+        "CoCRoI": 4.5038523857843185,
+        "Annual Cash Flow": 1975.5022527146466,
         "Total Investment": 43862.5
     },
     {
         "Year": 30,
-        "CoCRoI": 0.45289561126718625,
-        "Annual Cash Flow": 198.6513374920696,
+        "CoCRoI": 0.36596169023574965,
+        "Annual Cash Flow": 160.5199463796557,
         "Total Investment": 43862.5
     }
 ]

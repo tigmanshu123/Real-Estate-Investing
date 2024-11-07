@@ -278,3 +278,77 @@ def compute_performance_kpis(street_address, params_filepath, full_address,rapid
     plt.close()
 
 
+
+def create_exec_summary_perf_table(street_address, purchase_price):
+    # Load Excel files
+    monthly_expenses_path = f"{street_address}/Results/Excels/monthly_expenses.xlsx"
+    performance_kpis_path = f"{street_address}/Results/Excels/Performance_KPIs.xlsx"
+
+    monthly_expenses = pd.read_excel(monthly_expenses_path, sheet_name='Sheet1')
+    cocroi = pd.read_excel(performance_kpis_path, sheet_name='CoCRoI')
+    overall_cagr = pd.read_excel(performance_kpis_path, sheet_name='Overall CAGR')
+
+    # Initialize the DataFrame for the executive summary table
+    years = [f'Year {i}' for i in range(1, 11)]
+    metrics = [
+        'Gross rental income', 'Cash flow', 'EoY equity', 'Investment',
+        'Overall Return ($)', 'CoCRoI', 'Overall RoI (CAGR)', 'Cap rate',
+        'Gross Rent Multiplier', 'Expense/rent ratio', 'Rent/Purchase Price ratio'
+    ]
+    exec_summary_df = pd.DataFrame(index=metrics, columns=years)
+
+    # Gross Rental Income - summing 'Monthly Rent' for every 12 months
+    for year in range(1, 11):
+        annual_rent = monthly_expenses.loc[(monthly_expenses['Month'] >= (year - 1) * 12 + 1) &
+                                           (monthly_expenses['Month'] <= year * 12), 'Monthly Rent'].sum()
+        exec_summary_df.loc['Gross rental income', f'Year {year}'] = f"${annual_rent:.2f}"
+
+    # Cash Flow - from 'Annual Cash Flow' in overall_cagr
+    exec_summary_df.loc['Cash flow'] = overall_cagr['Annual Cash Flow'][:10].apply(lambda x: f"${x:.2f}").values
+
+    # End of Year Equity - from 'Home Equity' in overall_cagr
+    exec_summary_df.loc['EoY equity'] = overall_cagr['Home Equity'][:10].apply(lambda x: f"${x:.2f}").values
+
+    # Total Investment Till Date - from 'Total Investment' in overall_cagr
+    exec_summary_df.loc['Investment'] = overall_cagr['Total Investment'][:10].apply(lambda x: f"${x:.2f}").values
+
+    # Overall Return ($) - from 'Overall Return' in overall_cagr
+    exec_summary_df.loc['Overall Return ($)'] = overall_cagr['Overall Return'][:10].apply(lambda x: f"${x:.2f}").values
+
+    # CoCRoI - from 'CoCRoI' in cocroi
+    exec_summary_df.loc['CoCRoI'] = cocroi['CoCRoI'][:10].apply(lambda x: f"{x:.2f}%").values
+
+    # Overall RoI (CAGR) - from 'Overall CAGR' in overall_cagr
+    exec_summary_df.loc['Overall RoI (CAGR)'] = overall_cagr['Overall CAGR'][:10].apply(lambda x: f"{x:.2f}%").values
+
+    # Cap Rate - NOI / Purchase Price
+    for year in range(1, 11):
+        noi = monthly_expenses.loc[(monthly_expenses['Month'] >= (year - 1) * 12 + 1) &
+                                   (monthly_expenses['Month'] <= year * 12), ['Monthly Cash Flow', 'Monthly mortgage payment']].sum().sum()
+        cap_rate = (noi / purchase_price) * 100
+        exec_summary_df.loc['Cap rate', f'Year {year}'] = f"{cap_rate:.2f}%"
+
+    # Gross Rent Multiplier (GRM) - Purchase Price / Annual Rental Income
+    for year in range(1, 11):
+        annual_rent = exec_summary_df.loc['Gross rental income', f'Year {year}']
+        grm = round(purchase_price / float(annual_rent.replace('$', '')), 2) if annual_rent != 0 else 0
+        exec_summary_df.loc['Gross Rent Multiplier', f'Year {year}'] = grm
+
+    # Expense to Rent Ratio - Total Operating Expense / Rent
+    for year in range(1, 11):
+        total_expense = monthly_expenses.loc[(monthly_expenses['Month'] >= (year - 1) * 12 + 1) &
+                                             (monthly_expenses['Month'] <= year * 12), 'Total Monthly Expenses'].sum()
+        gross_rental_income = float(exec_summary_df.loc['Gross rental income', f'Year {year}'].replace('$', ''))
+        expense_rent_ratio = round((total_expense / gross_rental_income), 2) if gross_rental_income != 0 else 0
+        exec_summary_df.loc['Expense/rent ratio', f'Year {year}'] = expense_rent_ratio
+
+    # Rent-to-Price Ratio - Annual Rent / Purchase Price
+    for year in range(1, 11):
+        annual_rent = float(exec_summary_df.loc['Gross rental income', f'Year {year}'].replace('$', ''))
+        rent_price_ratio = (annual_rent / purchase_price) * 100
+        exec_summary_df.loc['Rent/Purchase Price ratio', f'Year {year}'] = f"{rent_price_ratio:.2f}%"
+
+    # Save the DataFrame as Excel
+    exec_summary_excel_path = f"{street_address}/Results/Excels/Exec_Summary_Performance_KPIs.xlsx"
+    with pd.ExcelWriter(exec_summary_excel_path) as writer:
+        exec_summary_df.to_excel(writer, sheet_name='Executive Summary')
