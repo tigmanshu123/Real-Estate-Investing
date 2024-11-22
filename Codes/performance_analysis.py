@@ -352,3 +352,53 @@ def create_exec_summary_perf_table(street_address, purchase_price):
     exec_summary_excel_path = f"{street_address}/Results/Excels/Exec_Summary_Performance_KPIs.xlsx"
     with pd.ExcelWriter(exec_summary_excel_path) as writer:
         exec_summary_df.to_excel(writer, sheet_name='Executive Summary')
+
+
+def plot_investment_comparison(street_address, params_filepath):
+    
+    # Load parameters from YAML file
+    params = read_yaml(params_filepath)
+    sp500_cagr = params['benchmark_assumptions']['sp500_annual_return']
+    liquid_cash_cagr = params['benchmark_assumptions']['inflation_rate']
+
+    # Load overall CAGR data from JSON file
+    cagr_json_path = os.path.join(street_address, "Results", "JSON", "overall_cagr.json")
+    with open(cagr_json_path, 'r') as json_file:
+        cagr_data = json.load(json_file)
+            
+    # Extract years and overall return
+    years = [0, 2, 4, 6, 9, 14, 19, 29]
+    overall_return = [entry['Overall Return'] for entry in cagr_data if entry['Year'] in years]
+    total_investment = cagr_data[0]['Total Investment']
+
+    # Calculate returns for S&P 500 and liquid cash
+    sp500_return = [total_investment * ((1 + sp500_cagr / 100) ** year) for year in years]
+    liquid_cash_return = [total_investment * ((1 + liquid_cash_cagr / 100) ** year) for year in years]
+    
+    # Plot the data as a bar chart
+    plt.figure(figsize=(12, 8), dpi=100)
+    bar_width = 0.25
+    index = range(len(years))
+
+    plt.bar(index, overall_return, bar_width, label='Property Investment')
+    plt.bar([i + bar_width for i in index], sp500_return, bar_width, label='S&P 500')
+    plt.bar([i + 2 * bar_width for i in index], liquid_cash_return, bar_width, label='Liquid Cash')
+
+    plt.axhline(y=total_investment, color='r', linestyle='--', label='Initial Investment')
+
+    plt.xlabel('Years')
+    plt.ylabel('Return ($)')
+    plt.title('Investment Comparison Over Time')
+    plt.suptitle(f"Assumes {sp500_cagr}% and {liquid_cash_cagr}% YoY CAGR for S&P500 and Liquid Cash", fontsize=10)
+    plt.xticks([i + bar_width for i in index], years)
+    plt.legend()
+    plt.grid(True)
+
+    # Create directory for plots if it doesn't exist
+    plots_dir = os.path.join(street_address, "Plots")
+    os.makedirs(plots_dir, exist_ok=True)
+
+    # Save the plot
+    plot_path = os.path.join(plots_dir, "investment_comparison.png")
+    plt.savefig(plot_path)
+    plt.close()

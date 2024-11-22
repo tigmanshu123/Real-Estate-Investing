@@ -6,7 +6,7 @@ property_location:
 
 property_details:
   type: 'SingleFamily' # SingleFamily, MultiFamily, Condo, Townhouse, Apartment 
-  number_of_bedrooms: 3
+  number_of_bedrooms: 3 
   number_of_bathrooms: 2
   year_rehabbed: ""
   amenities_to_search: ["hospital", "school", "restaurant", "park", "pharmacy", "bank", "grocery"]
@@ -52,6 +52,10 @@ future_assumptions:
   annual_water_sewer_garbage_growth_percent: 0 # typically matches with annual inflation rate
   broker_fee_at_sale_percent: 8 # typically includes 6% as commission (buyer and seller) and 2% in other fees such as staging, cleaning, attorney, appraisal, inspection, clearing (taxes, utilities), etc.
   annual_hoa_growth_percent: 0 # See CC&R or HOA documents for the annual increase rate 
+
+benchmark_assumptions:
+  sp500_annual_return: 10 # typically ranges b/w 8-12%, 10% is a good starting point
+  inflation_rate: 2.5 # typically ranges b/w 2-3%, 2.5% is a good starting point
 
 Generative_AI:
   LLM_model: "gpt-4o"

@@ -95,6 +95,7 @@ def run_property_assessment(param_file_path):
     perf_analysis.compute_zestimate_to_purchase_percent(street_address, current_zestimate, purchase_price)
     perf_analysis.get_school_ratings(street_address,full_address, rapid_api_key)
     perf_analysis.compute_performance_kpis(street_address, param_file_path, full_address, rapid_api_key)
+    perf_analysis.plot_investment_comparison(street_address, param_file_path)
     perf_analysis.create_exec_summary_perf_table(street_address, purchase_price)
 
     # Location details assessment

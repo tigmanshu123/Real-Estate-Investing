@@ -132,6 +132,7 @@ def post_process_markdown_files(street_address):
         append_plot_to_md(street_address, 'Cash Flow & Expenses.md', 'yearly_expenses_plot.png', 'Below is a chart showing the evolution of annual rent, cash flow and expenses throughout the ownership tenure')
         append_plot_to_md(street_address, 'Performance Analysis.md', 'performance_kpis.png', 'Below is a chart showing the evolution of the CoCRoI and Overall CAGR throughout the ownership tenure')
         append_plot_to_md(street_address, 'Performance Analysis.md', 'zestimate_history.png', 'Below is a chart showing the evolution of Zestimate (from Zillow) price of the property over history')
+        append_plot_to_md(street_address, 'Performance Analysis.md', 'investment_comparison.png', 'Below is a chart comparing the overall property investment with an alternative S&P 500 investment and passive cash growth (assuming inflation returns)')
         append_plot_to_md(street_address, 'Tax History.md', 'tax_history.png', 'Below is a chart showing the evolution of the paid tax and assessed value of the property over history (sourced from Zillow)')
 
     except FileNotFoundError as fnf_error:
