@@ -134,7 +134,7 @@ def compute_cocroi(street_address, params_filepath):
     monthly_data = pd.read_excel(excel_path)
 
     # Convert monthly data to annual data
-    monthly_data['Year'] = monthly_data['Month'] // 12
+    monthly_data['Year'] = monthly_data.index // 12
     annual_data = monthly_data.groupby('Year').sum().reset_index()
 
     # Rename "Monthly Cash Flow" column to "Annual Cash Flow"

@@ -172,7 +172,7 @@ def calculate_expenses(street_address, final_rent, params_file_path, tenure_in_y
     data['Monthly mortgage payment'] = monthly_mortgage_payment
 
     df = pd.DataFrame(data)
-    df['Total Monthly Expenses'] = df.drop(columns=['Monthly Rent']).sum(axis=1)
+    df['Total Monthly Expenses'] = df.drop(columns=['Month', 'Monthly Rent']).sum(axis=1)
     df['Monthly Cash Flow'] = df['Monthly Rent'] - df['Total Monthly Expenses']
 
     # Create the Results directory if it doesn't exist
