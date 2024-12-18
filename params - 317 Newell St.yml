@@ -55,3 +55,20 @@ future_assumptions:
 
 Generative_AI:
   LLM_model: "gpt-4o"
+
+benchmarking:
+  sp_cagr:
+    3: 9.1
+    5: 13.5
+    10: 11.6
+    15: 12.4
+    20: 8.6
+    30: 8.7
+  hy_savings_rate:
+    3: 4
+    5: 2.5
+    10: 1.5
+    15: 1.5
+    20: 1.5
+    30: 1.5
+

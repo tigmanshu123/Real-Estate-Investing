@@ -1,26 +1,25 @@
-| Characteristic       | Value                           |
-|----------------------|---------------------------------|
-| Year Built           | 1908                            |
-| Living Area (sqft)   | 1384                            |
-| Bedrooms             | 3                               |
-| Bathrooms            | 1                               |
-| Garage Spaces        | 2                               |
-| Lot Size             | 6,599 sqft                      |
-| HVAC                 | Forced Air, Gas                 |
-| Cooling              | Central Air                     |
-| Appliances           | NOT FOUND                       |
-| Home Type            | SingleFamily                    |
-| HOA Fees             | NOT FOUND                       |
-| Annual Insurance     | 609                             |
-| Utilities            | NOT FOUND                       |
-| Property Condition   | NOT FOUND                       |
-| Views                | NOT FOUND                       |
-| Description          | 3 Bedroom colonial close to downtown, shopping, restaurants, middle and high schools. Needs TLC. Fenced backyard, 2 car detached garage. Subject to short sale approval. |
+```markdown
+| Characteristic        | Value                                     |
+|-----------------------|-------------------------------------------|
+| Year Built            | 1908                                      |
+| Living Area (sqft)    | 1384                                      |
+| Bedrooms              | 3                                         |
+| Bathrooms             | 1                                         |
+| Garage Spaces         | 2                                         |
+| Lot Size              | 6,599 sqft                                |
+| HVAC                  | Forced Air, Gas                           |
+| Cooling               | Central Air                               |
+| Appliances            | NOT FOUND                                 |
+| Home Type             | SingleFamily                              |
+| HOA Fees              | NOT FOUND                                 |
+| Annual Insurance      | 609                                       |
+| Utilities             | NOT FOUND                                 |
+| Property Condition    | NOT FOUND                                 |
+| Views                 | NOT FOUND                                 |
+| Description           | 3 Bedroom colonial close to downtown...   |
 
-## Property Assessment
+## Assessment
 
-The investment property is a historical single-family home built in 1908 and offers substantial living space of 1384 square feet. With 3 bedrooms and only 1 bathroom, the layout might limit appeal for larger families seeking additional bathrooms. The property's appeal is enhanced by a considerable lot size of 6,599 sqft and the provision of 2 garage spaces. Central air conditioning and a forced air HVAC system are positive features, ensuring modern comfort. However, several characteristics are missing, notably, the absence of information on appliances, HOA Fees, and utilities, which are essential considerations for calculating ongoing maintenance costs.
+The property, built in 1908, is a single-family residential home with a decent living area of 1,384 sqft and a lot size of 6,599 sqft, indicating moderate space availability. The home has 3 bedrooms and 1 bathroom, making it suitable for small families or rental purposes. Its proximity to downtown and schools bodes well for convenience, as highlighted in the **Description**. The presence of central air cooling and forced air, gas HVAC systems are potential advantages ensuring comfort.
 
-Highlighted risks include the property's condition being unidentified ("Needs TLC" from the description suggests potential need for renovation), and a "short sale approval", which can prolong transaction times and introduce uncertainty. Moreover, the absence of appliances and undefined property condition might escalate repair and outfitting costs substantially.
-
-Overall, while the property presents a solid foundation for investment with potential upside, it's crucial to conduct thorough due diligence to uncover further details on property condition, appliance needs, and financial implications before proceeding.
+However, there are notable risks and uncertainties. The **Property Condition** being marked as "Needs TLC" and the lack of specifics under "Property Condition" and "Appliances" denote potential unforeseen repair costs that could affect profitability. The **Subject to short sale approval** status highlighted in the description introduces a complication that might delay or complicate the purchase process. Additionally, missing information such as **HOA Fees**, **Utilities**, and **Views** may be significant for a comprehensive assessment of recurring costs or benefits like community maintenance and aesthetics.

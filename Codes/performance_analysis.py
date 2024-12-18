@@ -352,3 +352,75 @@ def create_exec_summary_perf_table(street_address, purchase_price):
     exec_summary_excel_path = f"{street_address}/Results/Excels/Exec_Summary_Performance_KPIs.xlsx"
     with pd.ExcelWriter(exec_summary_excel_path) as writer:
         exec_summary_df.to_excel(writer, sheet_name='Executive Summary')
+
+
+
+def benchmarking_analysis(street_address, initial_investment, sp_cagr, hy_savings_rate):
+
+    # Load real estate investment data
+    json_path = os.path.join(street_address, "Results", "JSON", "overall_cagr.json")
+    with open(json_path, 'r') as json_file:
+        real_estate_data = json.load(json_file)
+
+    horizons = [3, 5, 10, 15, 20, 30]
+    real_estate_values = []
+    sp_values = []
+    hy_values = []
+
+    for horizon in horizons:
+        # Real estate investment value
+        if horizon <= len(real_estate_data):
+            real_estate_value = real_estate_data[horizon - 1]['Overall Return']
+        else:
+            real_estate_value = None
+        real_estate_values.append(real_estate_value)
+
+        # S&P investment value
+        sp_value = initial_investment * ((1 + sp_cagr[horizon] / 100) ** horizon)
+        sp_values.append(sp_value)
+
+        # HY savings rate value
+        hy_value = initial_investment * ((1 + hy_savings_rate[horizon] / 100) ** horizon)
+        hy_values.append(hy_value)
+
+    # Plotting the data
+    x = range(len(horizons))
+    width = 0.2
+
+    plt.figure(figsize=(12, 8))
+    bars_real_estate = plt.bar([p - width for p in x], real_estate_values, width=width, label='Real Estate Investment')
+    bars_sp = plt.bar(x, sp_values, width=width, label='S&P Investment')
+    bars_hy = plt.bar([p + width for p in x], hy_values, width=width, label='HY Savings')
+
+    # Annotating bar values
+    for bar in bars_real_estate:
+        plt.text(bar.get_x() + bar.get_width() / 2, bar.get_height() or 0, f'{bar.get_height():,.0f}', 
+                 ha='center', va='bottom', fontsize=10, color='black')
+    for bar in bars_sp:
+        plt.text(bar.get_x() + bar.get_width() / 2, bar.get_height() or 0, f'{bar.get_height():,.0f}', 
+                 ha='center', va='bottom', fontsize=10, color='black')
+    for bar in bars_hy:
+        plt.text(bar.get_x() + bar.get_width() / 2, bar.get_height() or 0, f'{bar.get_height():,.0f}', 
+                 ha='center', va='bottom', fontsize=10, color='black')
+
+    # Adding a horizontal line for initial investment
+    plt.axhline(y=initial_investment, color='red', linestyle='-', linewidth=3, label='Initial Investment')
+    plt.text(len(horizons) - 0.5, initial_investment, f'{initial_investment:,.0f}', 
+             ha='right', va='bottom', fontsize=10, color='red')
+
+    plt.xlabel('Investment Horizon (Years)')
+    plt.ylabel('Investment Value ($)')
+    plt.title('Benchmarking Analysis')
+    plt.xticks(x, [f'{h}Y' for h in horizons])
+    plt.legend()
+    plt.grid(True)
+
+    # Create directory for plots if it doesn't exist
+    plots_dir = os.path.join(street_address, "Plots")
+    os.makedirs(plots_dir, exist_ok=True)
+
+    # Save the plot
+    plot_path = os.path.join(plots_dir, "benchmarking_analysis.png")
+    plt.savefig(plot_path)
+    plt.close()
+

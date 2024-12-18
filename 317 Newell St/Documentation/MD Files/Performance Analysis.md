@@ -1,136 +1,142 @@
-## Investment Property Analysis
+## Overall CAGR and Return Analysis
 
-## Overall CAGR Evaluation
+The investment property data presents an intriguing financial journey over 30 years. Looking through the provided dataset, which accounts for the `Overall CAGR` and `Overall Return`, we can create a narrative about the investment's performance and potential risks, as seen in each year.
 
-Analyzing the data for each year:
+Initially, the investment shows a negative `Overall CAGR` and `Overall Return`, with sharp losses in the first few years. During **Year 0**, the `Overall CAGR` stands at an alarming -100.0, while `Overall Return` is 21686.659135391703. By **Year 1**, the `Overall CAGR` shows improvement to -46.021939130679556 with an `Overall Return` of 23676.12694880568. This progression implies that although the investment remains at a loss, it's reducing as the years advance. 
 
-- **Initial Loss**: In Year 0, the overall CAGR is -100.0% due to an initial negative cash flow of -$3,571.99 and a total investment of $43,862.5. The property begins with a home value of $145,000, but the overall return is $22,156.36.
-- **Improving Trends**: By Year 6, the overall CAGR improves significantly to -1.22%. The cumulative cash flow reaches -$10,161.71 with a home value increase to $163,293.55 and an increase in home equity to $63,979.57. The overall return climbs to $40,754.38.
-- **Positive Growth**: Positive growth is achieved starting in Year 7, with an overall CAGR of 0.25%. This is characterized by cumulative cash flow reducing to -$11,056.75 as cash flow increases, home value rises to $166,559.42, home equity to $69,018.51, and an overall return of $44,637.00.
-- **Consistent Growth Uptrend**: By Year 20, the property demonstrates a more stable growth, with a CAGR of 5.40% as the home value appreciates to $215,462.37, and the home equity reaches $157,173.80. The cumulative cash flow improves to -$14,335.07, indicating recovering cash flow conditions.
-- **Steady Returns at Maturity**: At Year 29, the overall CAGR stabilizes at 5.94%, with overall returns of $233,879.11, cumulative cash flow at -$3,018.57, and home equity and value both peaking as the debt reduces.
+Over time, from **Year 2** to **Year 9**, the `Overall CAGR` continues its upward trajectory from -23.258383376291025 to positive growth noted in **Year 9** at 0.6759520734537894. Similarly, the `Overall Return` enhances steadily, starting from 25831.835635711657 to 46604.20342681867.
 
-## Overall Return Assessment
+The situation further improves as we move from **Year 10** onward. Here, the property registers positive `Overall CAGR`, increasing consistently year by year. By **Year 29**, the figure rises to 5.50754416726551, reflective of the compound annual growth strengthening over the investment cycle. Concurrently, the `Overall Return` grows to 207642.04502744103 in the same year, demonstrating a robust return on the initial `Total Investment` of 43862.5.
 
-- **Initial Negative Return**: In Year 0, the overall return is $22,156.36, lower than the initial investment due to the high cost of sales ($11,600).
-- **Steady Increase in Home Equity**: Throughout the 30 years, home equity increases substantially from $37,328.35 in Year 0 to $257,497.48 in Year 29, indicating effective long-term appreciation and mortgage repayment success.
-- **Sales Costs Impact**: Sales costs increase annually, reaching $20,599.80 by Year 29, though they are outweighed by home value appreciation.
-- **Positive Return Outlook**: The overall returns indicate strong potential for realizing profits when considering property appreciation and improving cash flow trends.
+## Risk Assessment
 
-## Risk Factors
+Despite these positive indications, certain risks are noteworthy:
 
-- **Initial Losses**: High negative cash flow in early years may indicate risk for investors who require early yield.
-- **Slow Positive Cash Flow**: Notably, positive annual cash flow does not emerge until Year 17, which could be a concern for investors focused on immediate cash flow.
-- **Sales Costs Accumulation**: The escalating sales cost might reduce net gains if the property is sold before maturity (Year 29).
+1. **Early Losses:** The investment bears initial losses, notably negative cash flows. The "Cumulative Annual Cash Flow" remains negative until a crossover in **Year 25** (when it turns positive at -31310.306617703973), indicative of a prolonged period before cash flows start becoming favorable.
 
-## Conclusion
+2. **Sales Cost Impact:** Costs associated with selling (`Sales Cost`) compound over time, which unfavorably influences the `Overall Return`. By **Year 29**, the `Sales Cost` reaches 20599.79840744992, impacting the net returns upon exit.
 
-Overall, this investment property offers moderate long-term appreciation potential as demonstrated by the steady increase in CAGR from negative to over 5.9%. However, initial years present cash flow challenges as returns take time to grow measurably positive. Investors need to be prepared for initial losses and delays in positive cash flow but can expect substantial home equity and returns if held long-term.
+In conclusion, the investment demonstrates significant initial risk but with potential for solid long-term gains. As the property's value appreciates and the equity builds up, it eventually yields positive returns and contributes to a favorable compound growth rate. Investors with a longer time horizon and capacity to bear early losses may find this property attractive for its eventual payout. However, they must remain cognizant of the initial negative returns and factor in the implications of the sales costs carefully in their financial planning.
 
-## Analysis of Cash-on-Cash Return on Investment (CoCRoI)
+## Assessment of CoCRoI
 
-The analysis of the CoCRoI over the 30-year period illustrates an initially challenging financial landscape, but shows signs of improvement over time.
+## Summary of CoCRoI Trends
 
-## Initial Investment Concerns
+The data provided spans a 30-year evaluation of a real estate investment. The Cash on Cash Return on Investment (CoCRoI) shows an initial negative trend, which is gradually turning positive as the years progress:
 
-- **Year 0** starts with a CoCRoI of -8.20%, which is notably adverse, paired with an **Annual Cash Flow** of -$3,597.57, reflecting the immediate financial obligation of the initial **Total Investment** of $43,862.5.
-- The negative CoCRoI continues through **Year 16**, with the least negative performance recorded at -0.18% (Year 16) compared to the lesser magnitude of negative cash flow at -$79.76.
+- **Initial Years (0-24):** The CoCRoI starts at -9.14% in Year 0 and remains negative until Year 24 with -0.08%. Throughout these years, there is a consistent negative CoCRoI, although the magnitude of negativity gradually decreases. The largest negative CoCRoI is in Year 0 with -9.14%, and it improves each year.
 
-## Transition to Positive Returns
+- **Mid-Point (Year 15):** By Year 15, the CoCRoI improves to -2.42%, showing a recovering trajectory although still negative.
 
-- At **Year 17**, the investment begins to yield positive returns with a CoCRoI of 0.09% and an Annual Cash Flow of $39.30. This marks a turning point, indicating that the property starts to overcome its initial financial burdens.
-- Moving forward, the CoCRoI steadily climbs, reaching impressive levels such as 4.50% in **Year 29**, with an Annual Cash Flow of $1,975.50, suggesting robust financial health in the later stages.
+- **Positive Shift (Year 25 onwards):** The CoCRoI turns positive starting from Year 25 with 0.25% and continues to increase up to 1.71% in Year 29. This indicates a turning point where the investment starts to yield positive cash returns relative to the initial capital investment.
 
-## Positive Trends and Risks
+- **Year 30:** An anomaly occurs in Year 30, with the CoCRoI dropping back to 0.13%. This could indicate increased costs or reduced income in this year relative to previous years.
 
-- The CoCRoI continues on an upward trend past Year 18, peaking at 4.50% in Year 29, with a handsome annual cash flow. However, the sudden drop to a CoCRoI of 0.37% in **Year 30**, with Annual Cash Flow drastically reducing to $160.52, suggests potential variability in returns that could be indicative of market changes or unforeseen costs.
+## Risks Highlighted by CoCRoI Data
 
-## Investment Risks
+- **Extended Negative Period:** The extended period from Year 0 to Year 24 where CoCRoI is negative poses a significant cash flow risk. The investment will require external cash support to cover negative cash flows until these returns become positive in Year 25. 
 
-- The severely negative returns from **Year 0 to Year 16** might deter risk-averse investors, as the lack of positive cash flow during these years implies a commitment to sustain those losses through margin financing or other capital supplementation.
-- The consistent negative returns could stress liquidity and financial flexibility during the early years, a risk that requires careful cash management and planning.
+- **Anomalous Year 30:** The drop in CoCRoI in Year 30 to 0.13% after reaching 1.71% in Year 29 requires attention. It may be due to a unique event or pattern such as increased maintenance costs, tax implications, or drop in rental income, which adversely affected cash flow.
 
-## Conclusion
+## Cash Flow Analysis
 
-Overall, while this property requires a considerable upfront investment that doesn’t yield positive returns until Year 17, it eventually matures into a financially viable asset demonstrating strong future value potential. Investors should be prepared for prolonged negative cash flow periods and should possess a strong financial capability and risk tolerance to support this investment until it turns profitable. Adequate assessment of market conditions and future cash flow projections are crucial for ensuring sustained profitability and managing potential year-over-year variability as observed in Year 30's data.
+- **Continually Negative Cash Flow:** The Annual Cash Flow mirrors the CoCRoI trend - it remains negative until Year 24, starting at -$4,009.52 in Year 0 and gradually ascending to -$35.65 by Year 24. This implies that additional capital will be required to support the investment during these periods.
 
-```markdown
-## CAGR Analysis Table
+- **Positive Cash Flow Onset:** Starting Year 25, Annual Cash Flow turns positive to $108.15 and improves to $748.93 by Year 29, before dropping to $58.10 in Year 30. These trends reflect the CoCRoI assessments indicating that profitability is realized starting Year 25.
 
-| Time Horizon | CAGR   |
-|--------------|--------|
-| 3-Year       | 24.79% |
-| 5-Year       | 19.83% |
-| 10-Year      | 11.75% |
+## Recommendations
 
-## Summary of Assessment
+- **Financial Preparedness:** Investors should be ready to supplement cash needs initially for nearly 25 years before experiencing a financial breakeven.
 
-The historical Compound Annual Growth Rate (CAGR) for the investment property shows significant growth over varying time horizons. 
+- **Monitoring Costs/Fees:** Investigation into costs and income patterns to prevent adverse anomalies similar to Year 30 in subsequent years should be conducted.
 
-- **3-Year CAGR**: The recent 3-year CAGR is exceptionally high at **24.79%**, indicating strong short-term growth. This may reflect a period of rapid appreciation, possibly driven by current market trends, improvements in the property, or developments in the surrounding area.
+- **Long-Term View:** Considering this investment as a long-term strategy could be beneficial, given the eventual positive returns after Year 24.
 
-- **5-Year CAGR**: Over a 5-year horizon, the CAGR is **19.83%**, still substantial but lower than the 3-year rate. This suggests that while growth has been strong, it has moderated slightly over a more extended period. This could be indicative of earlier market conditions or the property's maturity in its current growth stage.
+- **Analyzing Year 30 Drop:** A detailed investigation into the Year 30 decline in both CoCRoI and cash flow should be conducted to prevent future occurrences and refine income strategies. 
 
-- **10-Year CAGR**: In the long term, the CAGR stands at **11.75%**. This is a sustainable growth rate over a decade, showing consistent value appreciation. However, it also illustrates that recent years have experienced increased growth rates compared to earlier years.
+Careful management and a focus on maintaining and improving income streams beyond the 25th year will be essential for ensuring that this property continues to generate a favorable return thereafter.
+
+## Historical CAGR Table
+
+| Time Horizon | CAGR (%) |
+|--------------|----------|
+| 3-Year       | 25.38    |
+| 5-Year       | 20.17    |
+| 10-Year      | 11.91    |
+
+## Assessment Summary
+
+Based on the provided Compound Annual Growth Rate (CAGR) data for the investment property:
+
+- **3-Year Performance**: The property has experienced an impressive CAGR of 25.38%. This indicates a strong short-term growth trajectory, suggesting that the property has been in a market or condition that significantly boosted its value in recent years.
+
+- **5-Year Performance**: Over a 5-year period, the CAGR is 20.17%. This slightly lower figure compared to the 3-year CAGR might indicate that the growth experienced more recently was extraordinary or that certain market dynamics have changed, but the property still retains robust growth characteristics.
+
+- **10-Year Performance**: With a 10-year CAGR of 11.91%, the longer-term performance reflects historical stability and consistent appreciation. This rate is sustainable and positive over an extended period, emphasizing long-term value retention and growth.
 
 ## Risks and Considerations
 
-- **Sustainability of Growth**: The very high 3-year CAGR of **24.79%** may not be sustainable indefinitely. Such rapid growth often attracts more competition, market corrections, or regulatory intervention, which may slow future appreciation.
+- **Market Volatility**: The sharp change from a 10-year CAGR of 11.91% to a 3-year CAGR of 25.38% suggests potential volatility or sudden market changes. Investors should assess whether this rapid increase is sustainable and investigate the factors driving such growth.
 
-- **Market Volatility**: The difference between the 3-year and 10-year CAGRs (24.79% vs 11.75%) could indicate market volatility. Stakeholders should carefully analyze if the recent uptrend is due to temporary factors or fundamental improvements.
+- **Economic Factors**: It is crucial to consider broader economic conditions that may have influenced recent capital gains, such as inflation, interest rates, and local employment trends.
 
-- **Economic Factors**: External factors such as interest rate changes, economic downturns, or regional developments may impact future growth.
+- **Dependence on Recent Trends**: While the recent upward trend is a positive signal, relying solely on short-term performance can be risky. Historical growth rates should be viewed in the context of the property’s market, and adjustments should be made for any extraordinary conditions impacting these figures.
 
-It is crucial to continuously monitor market conditions and property performance to gauge if adjustments to the investment strategy are necessary to mitigate potential risks. A diversified investment approach may also help manage the risk associated with such growth rates.
-```
+- **Market Correction Potential**: As with any substantial appreciation, there is a risk of a market correction. Investors should be cautious about assuming continued high growth rates and consider preparing for potential downswings.
 
-## Historical Price Evolution
+These considerations will help in making an informed decision about investing in or continuing to hold this property.
 
-The property's Zestimate data reveals varying degrees of price volatility over the years. During December 2014, the property was valued at approximately $50,850 (timestamp `1417334400`). By February 2015, the value decreased slightly to $48,697 (timestamp `1420012800`). 
+## Price History Analysis
 
-From there, the next few years saw considerable fluctuations. In April 2015, the value rebounded to $51,444 (timestamp `1425110400`), but then it took a sharp drop to $41,105 by March 2016 (timestamp `1459407600`). Subsequently, the valuation showed further decline reaching $24,206 in June 2016 (timestamp `1464678000`).
+## **Initial Trended Downward Movement and Stabilization (2015-2016)**
 
-By the end of 2016, the property value began to recover, reaching $38,743 in November (timestamp `1475218800`). The upward trend continued into 2017, with the property peaking at $60,855 by August (timestamp `1504162800`).
+The data indicates the property underwent a downward trend from $48,697 in January 2015 to $31,696 in August 2015, hitting a low of $24,206 in June 2016. This represents a significant drop of approximately 50.3% from the highest point at the start of the dataset to the lowest point. Such volatility in the early timeframe shows potential vulnerability, possibly reflecting overall market conditions or specific property issues.
 
-The property value then experienced another downturn in late 2017 and early 2018, dropping to $47,287 by March 2018 (timestamp `1522479600`). Thereafter, there was a significant rebound, reaching another peak at $62,891 in July 2019 (timestamp `1564556400`).
+## **Recovery and Growth Phase (2016-2020)**
 
-The valuation remained relatively stable with minor fluctuations until November 2020, when it was recorded at $64,320 (timestamp `1606723200`). Another significant increase was noted during 2021, peaking at $77,187 in April (timestamp `1619766000`).
+Starting from the latter half of 2016, the property shows signs of recovery, reaching $42,242 in October 2016 and continuing the upward trajectory to $68,891 by August 2019. By December 2019, the price appreciated to $62,705, marking an appreciable increase from the trough in June 2016. The recovery indicates a positive sentiment returning, with the value nearly tripling from the lowest observed value ($24,206) within this period.
 
-Recent data from 2023 shows another dramatic increase, reaching a peak of $148,400 by November (timestamp `1730358000`). This substantial leap from the previous months is worth mentioning as it indicates either a significant market shift or an error in the valuation model.
+## **Stability and Incremental Gains (2019-2021)**
+
+From mid-2019 to late 2021, the property value showed relative stability with incremental gains. By December 2021, the Zestimate reached $76,100, indicating a steady rise and possibly a consolidation phase where the price fluctuations stabilized, albeit with periodic dips that could mark seasonal trends or market corrections.
+
+## **Recent Surge and High Volatility (2021-Present)**
+
+In recent periods, especially from early 2023, the property exhibited a sudden surge, reaching $90,600 in June 2023. Interestingly, a conspicuous anomalous spike is observed from July 2024, where the price leaps from $57,700 to $146,000. By October 2024, the property value peaked at $150,000. Such rapid and disproportionate increase could indicate speculative buying, market aberrations, or significant property improvements.
+
+## Risk Assessment
+
+## **Historical Volatility and Market Sensitivity**
+
+The history of this property shows significant periods of volatility with dramatic price fluctuations, especially during 2015-2016 and the recent anomalies in 2024. This indicates a risk factor related to market sensitivity that potential buyers or investors should be aware of. Such volatility may be due to externalities impacting the property sector or internal property limitations that were later rectified.
+
+## **Potential Speculation**
+
+The recent surges may also suggest speculative buying patterns or market overvaluation, which poses a risk if the market corrects this valuation. If rooted in speculation, these prices may not reflect true market conditions or property value, resulting in a correction.
+
+## **Sustainability of Recent Gains**
+
+Evaluating the sustainability of the current high valuations is critical. The consistent upward trend in 2021-2023 followed by the 2024 surge needs a deeper market analysis to determine if actual market dynamics and demand justify these prices, or if external factors may cause future price corrections.
+
+Overall, while the property appears to be on a positive trend in terms of price appreciation recently, past volatility and future risk factors should be considered for a holistic evaluation and investment decision-making.
+
+## Table
+
+| Metric                               | Value |
+|--------------------------------------|-------|
+| Zestimate to Purchase price delta (%)| 2.41  |
+
+## Assessment
+
+The Zestimate to Purchase price delta is 2.41%, indicating that the Zestimate is currently 2.41% higher than the purchase price. This disparity suggests that the property was acquired slightly below its estimated market value, which can be favorable for the buyer, assuming the Zestimate represents an accurate assessment of market conditions.
 
 ## Risks
 
-1. **Market Volatility**: The data reveals significant fluctuations in the property's value over the years, which suggests market instability. This is evidenced by dramatic falls, such as from $60,855 in August 2017 to $50,064 in November 2017 (timestamp `1509433200`), and unusual spikes as seen in 2023.
+1. **Zestimate Accuracy**: The reliability of the 2.41% delta depends heavily on the accuracy of the Zestimate. If the Zestimate is not reflective of true market value—due to outdated data, atypical property features, or recent neighborhood market shifts—this could mislead the perceived investment value.
 
-2. **Recent Valuation Variability**: Recent jumps in the property's value, from $80,500 in January 2023 (timestamp `1704009600`) to $148,400 in November 2023 (timestamp `1730358000`), may indicate hyperinflation of local prices or potential inaccuracies in valuation algorithms.
+2. **Market Volatility**: Any future changes in market conditions could affect the validity of the current Zestimate. Economic downturns, neighborhood depreciation, or changes in property demand could erode perceived value benefits derived from the current estimate.
 
-3. **Sustainability of Increases**: The sizeable recent increase needs further analysis to determine if these changes are sustainable or if they result from temporary market conditions or anomalies.
-
-## Conclusion
-
-Overall, while the property has displayed considerable appreciation over the decade, market volatility poses a significant risk. Potential investors should conduct further due diligence to understand the factors contributing to these fluctuations, especially recent price surges, and assess the potential for future price stability.
-
-## Zestimate to Purchase Price Analysis
-
-| Metric                                | Value |
-|---------------------------------------|-------|
-| Zestimate to Purchase price delta (percentage) | 2.00  |
-
-## Summary
-
-The **Zestimate to Purchase price delta** is 2.00%, which indicates that the Zestimate valuation is 2% higher than the actual purchase price. This suggests that you are acquiring the property at a price slightly below its estimated market value, which could be considered favorable for the buyer. The positive figure indicates a purchasing advantage, as the property seems to be undervalued based on Zestimate.
-
-## Risks
-
-Despite the favorable purchasing condition based on the current analysis, there are some potential risks to be aware of:
-
-1. **Accuracy of Zestimate**: The Zestimate is an estimated valuation that can sometimes fluctuate due to market regulation changes, recent sales in the area, or updates in property characteristics. Therefore, relying solely on the Zestimate may pose a risk if these factors are not accurately accounted for.
-
-2. **Market Volatility**: Given economic fluctuations, property values can change rapidly. A 2% undervaluation is relatively modest, and any downturn in the housing market could quickly negate this benefit.
-
-3. **Condition of the Property**: If the property requires significant repairs or updates that were not factored into the purchase price, the anticipated financial advantage might be offset.
-
-By considering these risks, you can better assess the opportunity and make a more informed purchasing decision.
+It is crucial for the prospective buyer to conduct additional due diligence, which may include obtaining independent appraisals, reviewing recent sale prices of comparable properties, and considering local market trends to solidify the market advantage suggested by this dataset.
 
 
 
@@ -142,3 +148,8 @@ Below is a chart showing the evolution of the CoCRoI and Overall CAGR throughout
 Below is a chart showing the evolution of Zestimate (from Zillow) price of the property over history
 
 ![](../../Plots/zestimate_history.png)
+
+
+Below is a chart showing the benchmarking assessment of the property against the market and high yield savings accounts - i.e., the evolution of the initial investment (downpayment and closing cost) if invested alternatively in the market or high yield savings accounts
+
+![](../../Plots/benchmarking_analysis.png)

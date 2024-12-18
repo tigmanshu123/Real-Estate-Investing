@@ -54,6 +54,9 @@ def run_property_assessment(param_file_path):
     baths = parameters['property_details']['number_of_bathrooms']
     build_type = parameters['property_details']['type']
 
+    sp_cagr = parameters['benchmarking']['sp_cagr']
+    hy_savings_rate = parameters['benchmarking']['hy_savings_rate']
+    
     api_keys = get_api_key()
     google_maps_api_key = api_keys['GOOGLE_MAPS_API_KEY']
     openai_api_key = api_keys['OPENAI_API_KEY']
@@ -62,6 +65,8 @@ def run_property_assessment(param_file_path):
 
     full_address = street_address + ', ' + city + ', ' + state + ' ' + zip_code
     loan_amount = purchase_price - down_payment
+    closing_costs = parameters['expense_information']['closing_cost_%_one_time'] * loan_amount / 100
+    initial_investment = down_payment + closing_costs
 
     print("\n\nInitiating property assessment for:", full_address)
 
@@ -96,6 +101,7 @@ def run_property_assessment(param_file_path):
     perf_analysis.get_school_ratings(street_address,full_address, rapid_api_key)
     perf_analysis.compute_performance_kpis(street_address, param_file_path, full_address, rapid_api_key)
     perf_analysis.create_exec_summary_perf_table(street_address, purchase_price)
+    perf_analysis.benchmarking_analysis(street_address, initial_investment, sp_cagr, hy_savings_rate)
 
     # Location details assessment
     loc_details.get_niche_area_feel(street_address, zip_code, openai_api_key, openai_model)
